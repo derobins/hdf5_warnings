@@ -1,0 +1,284 @@
+Total unique [non-ignored] warnings: 1945
+Ignored notes / supplemental warning lines [not counted in unique warnings]: 0
+Duplicated warning lines [not counted in unique warnings]: 532
+Total ignored warnings: 0
+Total unique kinds of warnings: 56
+Total files with warnings: 216
+
+# of Warnings by frequency (file count)
+=======================================
+[ 0]  588 (81) - conversion to '-' from '-' may change the sign of the result [-Wsign-conversion]
+[ 1]  375 (57) - conversion from '-' to '-' may change value [-Wconversion]
+[ 2]  215 (57) - size of '-' - bytes exceeds maximum object size - [-Wlarger-than=]
+[ 3]   89 (33) - cast discards '-' qualifier from pointer target type [-Wcast-qual]
+[ 4]   83 (13) - implicit conversion from '-' to '-' to match other operand of binary expression [-Wdouble-promotion]
+[ 5]   80 (16) - comparison of integer expressions of different signedness: '-' and '-' [-Wsign-compare]
+[ 6]   40 ( 7) - comparing floating-point with '-' or '!=' is unsafe [-Wfloat-equal]
+[ 7]   40 (18) - the frame size of - bytes is larger than - bytes [-Wframe-larger-than=]
+[ 8]   39 (17) - stack usage might be - bytes [-Wstack-usage=]
+[ 9]   34 ( 5) - '-' defined but not used [-Wunused-variable]
+[10]   34 (15) - passing argument - of '-' discards '-' qualifier from pointer target type [-Wdiscarded-qualifiers]
+[11]   25 ( 8) - this statement may fall through [-Wimplicit-fallthrough=]
+[12]   24 ( 5) - this '-' clause does not guard... [-Wmisleading-indentation]
+[13]   23 ( 4) - initialization discards '-' qualifier from pointer target type [-Wdiscarded-qualifiers]
+[14]   21 ( 3) - assignment discards '-' qualifier from pointer target type [-Wdiscarded-qualifiers]
+[15]   21 ( 4) - cast between incompatible function types from '-' to '-' [-Wcast-function-type]
+[16]   21 ( 4) - ignoring return value of '-' declared with attribute '-' [-Wunused-result]
+[17]   20 (11) - stack usage is - bytes [-Wstack-usage=]
+[18]   16 ( 2) - left shift of negative value [-Wshift-negative-value]
+[19]   15 ( 5) - conversion from '-' to '-' may change value [-Wfloat-conversion]
+[20]   10 ( 5) - '-' defined but not used [-Wunused-function]
+[21]   10 ( 5) - to be safe all intermediate pointers in cast from '-' to '-' must be '-' qualified [-Wcast-qual]
+[22]    9 ( 5) - duplicated '-' condition [-Wduplicated-cond]
+[23]    9 ( 1) - '-' directive writing up to - bytes into a region of size - [-Wformat-overflow=]
+[24]    8 ( 1) - logical '-' of mutually exclusive tests is always false [-Wlogical-op]
+[25]    7 ( 5) - unused variable '-' [-Wunused-variable]
+[26]    6 ( 4) - this condition has identical branches [-Wduplicated-branches]
+[27]    6 ( 4) - format '-' expects argument of type '-', but argument - has type '-' [-Wformat=]
+[28]    6 ( 1) - format '%p' expects argument of type '-', but argument - has type '-' [-Wformat=]
+[29]    6 ( 1) - signed conversion from '-' to '-' changes the value of '-' [-Wsign-conversion]
+[30]    6 ( 2) - declaration of '-' shadows a previous local [-Wshadow]
+[31]    6 ( 1) - comparison is always true due to limited range of data type [-Wtype-limits]
+[32]    6 ( 4) - unused parameter '-' [-Wunused-parameter]
+[33]    6 ( 4) - implicit conversion from '-' to '-' to match other result of conditional [-Wdouble-promotion]
+[34]    5 ( 5) - no previous prototype for '-' [-Wmissing-prototypes]
+[35]    4 ( 2) - comparison of unsigned expression in '-' is always true [-Wtype-limits]
+[36]    3 ( 3) - unsigned conversion from '-' to '-' changes value from '-' to '-' [-Wsign-conversion]
+[37]    3 ( 3) - variable '-' set but not used [-Wunused-but-set-variable]
+[38]    3 ( 2) - unsigned conversion from '-' to '-' changes the value of '-' [-Wsign-conversion]
+[39]    2 ( 2) - nested extern declaration of '-' [-Wnested-externs]
+[40]    2 ( 2) - initialization of '-' from incompatible pointer type '-' [-Wincompatible-pointer-types]
+[41]    2 ( 1) - ISO C forbids conversion of object pointer to function pointer type [-Wpedantic]
+[42]    2 ( 2) - cast from function call of type '-' to non-matching type '-' [-Wbad-function-cast]
+[43]    2 ( 2) - assignment to '-' from incompatible pointer type '-' [-Wincompatible-pointer-types]
+[44]    2 ( 2) - '-' directive writing between - and - bytes into a region of size - [-Wformat-overflow=]
+[45]    1 ( 1) - old-style function definition [-Wold-style-definition]
+[46]    1 ( 1) - logical '-' of equal expressions [-Wlogical-op]
+[47]    1 ( 1) - '-' directive output may be truncated writing - bytes into a region of size between - and - [-Wformat-truncation=]
+[48]    1 ( 1) - implicit declaration of function '-'; did you mean '-'? [-Wimplicit-function-declaration]
+[49]    1 ( 1) - implicit declaration of function '-' [-Wimplicit-function-declaration]
+[50]    1 ( 1) - assignment to '-' from '-' makes integer from pointer without a cast [-Wint-conversion]
+[51]    1 ( 1) - absolute value function '-' given an argument of type '-' but has parameter of type '-' which may cause truncation of value [-Wabsolute-value]
+[52]    1 ( 1) - '-' may be used uninitialized [-Wmaybe-uninitialized]
+[53]    1 ( 1) - using floating-point absolute value function '-' when argument is of integer type '-' [-Wabsolute-value]
+[54]    1 ( 1) - increment of a boolean expression [-Wbool-operation]
+[55]    1 ( 1) - function declaration isn't a prototype [-Wstrict-prototypes]
+
+# of Warnings by filename (warning type)
+========================================
+[  0]  176 ( 9) - hdf5/tools/h5dump/h5dumpgentest.c
+[  1]   80 ( 7) - hdf5/test/dsets.c
+[  2]   64 ( 3) - hdf5/src/H5Znbit.c
+[  3]   55 ( 6) - hdf5/tools/h5diff/h5diffgentest.c
+[  4]   55 ( 3) - hdf5/test/cmpd_dset.c
+[  5]   53 ( 6) - hdf5/src/H5Zscaleoffset.c
+[  6]   42 ( 4) - hdf5/test/tvltypes.c
+[  7]   41 ( 2) - hdf5/test/tsohm.c
+[  8]   37 ( 3) - hdf5/tools/h5dump/h5dump_xml.c
+[  9]   37 (10) - hdf5/test/dt_arith.c
+[ 10]   35 ( 3) - hdf5/hl/test/test_packet_vlen.c
+[ 11]   35 ( 5) - hdf5/tools/lib/h5tools_str.c
+[ 12]   33 ( 2) - hdf5/test/cache_common.c
+[ 13]   31 ( 4) - hdf5/tools/perform/sio_engine.c
+[ 14]   30 ( 4) - hdf5/tools/lib/h5diff_array.c
+[ 15]   28 ( 9) - hdf5/src/H5private.h
+[ 16]   27 ( 2) - hdf5/test/tattr.c
+[ 17]   27 ( 6) - hdf5/test/cache.c
+[ 18]   26 ( 5) - hdf5/test/cork.c
+[ 19]   25 ( 1) - hdf5/test/cross_read.c
+[ 20]   24 ( 3) - hdf5/test/fillval.c
+[ 21]   23 ( 1) - hdf5/test/freespace.c
+[ 22]   22 ( 1) - hdf5/test/getname.c
+[ 23]   21 ( 4) - hdf5/tools/h5dump/h5dump_ddl.c
+[ 24]   21 ( 5) - hl/src/H5LTanalyze.c
+[ 25]   20 ( 3) - hdf5/test/tselect.c
+[ 26]   20 ( 3) - hdf5/src/H5Dscatgath.c
+[ 27]   18 ( 4) - hdf5/test/gheap.c
+[ 28]   18 ( 4) - hdf5/tools/lib/h5tools_dump.c
+[ 29]   18 ( 5) - hdf5/tools/h5repack/h5repacktst.c
+[ 30]   15 ( 3) - hdf5/tools/h5repack/h5repack_parse.c
+[ 31]   15 ( 5) - hdf5/test/plugin.c
+[ 32]   15 ( 2) - hdf5/src/H5HFcache.c
+[ 33]   14 ( 3) - hdf5/test/tunicode.c
+[ 34]   14 ( 3) - hdf5/test/hyperslab.c
+[ 35]   14 ( 2) - hdf5/test/bittests.c
+[ 36]   14 ( 4) - hdf5/test/links.c
+[ 37]   14 ( 4) - hdf5/tools/perform/zip_perf.c
+[ 38]   14 ( 1) - hdf5/src/H5timer.c
+[ 39]   13 ( 1) - hdf5/test/vds_swmr.h
+[ 40]   13 ( 2) - hdf5/test/trefer.c
+[ 41]   12 ( 2) - hdf5/test/error_test.c
+[ 42]   12 ( 4) - hdf5/test/th5o.c
+[ 43]   12 ( 1) - hdf5/tools/misc/h5repart.c
+[ 44]   12 ( 4) - hdf5/src/H5Ztrans.c
+[ 45]   11 ( 1) - hdf5/tools/h5repack/h5repack_opttable.c
+[ 46]   11 ( 1) - hdf5/src/H5checksum.c
+[ 47]   11 ( 6) - hdf5/tools/perform/sio_perf.c
+[ 48]   11 ( 2) - hdf5/tools/lib/h5tools.c
+[ 49]   11 ( 3) - hdf5/src/H5Dchunk.c
+[ 50]   11 ( 3) - hdf5/test/dtypes.c
+[ 51]   10 ( 1) - hdf5/hl/test/test_image.c
+[ 52]    9 ( 2) - hdf5/tools/perform/chunk.c
+[ 53]    9 ( 1) - hdf5/test/cache_tagging.c
+[ 54]    9 ( 3) - hdf5/test/vfd.c
+[ 55]    9 ( 1) - hdf5/tools/misc/vds/UC_1.h
+[ 56]    9 ( 1) - hdf5/tools/misc/vds/UC_2.h
+[ 57]    8 ( 1) - hdf5/src/H5FScache.c
+[ 58]    8 ( 2) - hdf5/test/tfile.c
+[ 59]    8 ( 3) - hdf5/src/H5Sselect.c
+[ 60]    8 ( 1) - hdf5/test/tid.c
+[ 61]    8 ( 6) - hdf5/tools/h5dump/h5dump.c
+[ 62]    8 ( 1) - hdf5/src/H5I.c
+[ 63]    7 ( 3) - hdf5/tools/h5repack/h5repack_refs.c
+[ 64]    7 ( 2) - hdf5/src/H5ST.c
+[ 65]    7 ( 4) - hdf5/tools/h5import/h5import.c
+[ 66]    7 ( 3) - hdf5/test/th5s.c
+[ 67]    7 ( 2) - hdf5/test/fheap.c
+[ 68]    7 ( 2) - hdf5/test/use_disable_mdc_flushes.c
+[ 69]    7 ( 1) - hdf5/tools/h5jam/h5unjam.c
+[ 70]    7 ( 3) - hdf5/test/titerate.c
+[ 71]    7 ( 1) - hdf5/src/H5Oalloc.c
+[ 72]    7 ( 4) - hdf5/tools/h5diff/h5diff_common.c
+[ 73]    7 ( 1) - hdf5/tools/perform/iopipe.c
+[ 74]    6 ( 2) - hdf5/src/H5FSsection.c
+[ 75]    6 ( 3) - hdf5/src/H5Ocache.c
+[ 76]    6 ( 1) - hdf5/test/set_extent.c
+[ 77]    6 ( 3) - hl/src/H5LTparse.y
+[ 78]    6 ( 2) - hdf5/tools/perform/overhead.c
+[ 79]    6 ( 3) - hdf5/src/H5Dselect.c
+[ 80]    6 ( 4) - hdf5/test/vds_swmr_reader.c
+[ 81]    6 ( 1) - hdf5/test/ntypes.c
+[ 82]    5 ( 1) - hdf5/src/H5Spoint.c
+[ 83]    5 ( 4) - hdf5/test/tcoords.c
+[ 84]    5 ( 3) - hdf5/tools/misc/vds/UC_1_one_dim_gen.c
+[ 85]    5 ( 2) - hdf5/src/H5Tvlen.c
+[ 86]    5 ( 2) - hdf5/src/H5MF.c
+[ 87]    5 ( 3) - hdf5/test/vds_swmr_gen.c
+[ 88]    5 ( 5) - hl/src/H5LTanalyze.l
+[ 89]    5 ( 3) - hdf5/src/H5FDfamily.c
+[ 90]    5 ( 2) - hdf5/test/h5test.c
+[ 91]    4 ( 3) - hdf5/test/flush2.c
+[ 92]    4 ( 2) - hdf5/src/H5Aint.c
+[ 93]    4 ( 1) - hdf5/src/H5Defl.c
+[ 94]    4 ( 3) - hdf5/src/H5Dint.c
+[ 95]    4 ( 3) - hdf5/tools/misc/h5mkgrp.c
+[ 96]    4 ( 1) - hdf5/test/use_append_mchunks.c
+[ 97]    4 ( 2) - hdf5/hl/src/H5LT.c
+[ 98]    4 ( 1) - hdf5/src/H5Gobj.c
+[ 99]    4 ( 3) - hdf5/src/H5Shyper.c
+[100]    4 ( 3) - hdf5/src/H5T.c
+[101]    4 ( 2) - hdf5/test/swmr_start_write.c
+[102]    4 ( 2) - hdf5/hl/test/test_ds.c
+[103]    4 ( 2) - hdf5/src/H5SL.c
+[104]    4 ( 3) - hdf5/tools/lib/h5tools_utils.c
+[105]    4 ( 1) - hdf5/src/H5Pfapl.c
+[106]    4 ( 2) - hdf5/src/H5L.c
+[107]    4 ( 1) - hdf5/test/use_append_chunk.c
+[108]    4 ( 1) - hdf5/tools/h5repack/h5repack_main.c
+[109]    4 ( 3) - hdf5/src/H5Dio.c
+[110]    3 ( 2) - hdf5/test/big.c
+[111]    3 ( 1) - hdf5/src/H5Eint.c
+[112]    3 ( 1) - hdf5/test/istore.c
+[113]    3 ( 1) - hdf5/src/H5Gtraverse.c
+[114]    3 ( 2) - hdf5/tools/h5ls/h5ls.c
+[115]    3 ( 1) - hdf5/src/H5Tnative.c
+[116]    3 ( 1) - hdf5/src/H5Tenum.c
+[117]    3 ( 2) - hdf5/tools/misc/vds/UC_5_stride_gen.c
+[118]    3 ( 2) - hdf5/src/H5Fint.c
+[119]    3 ( 1) - hdf5/test/theap.c
+[120]    3 ( 3) - hdf5/tools/misc/h5repart_gentest.c
+[121]    3 ( 1) - hdf5/src/H5Dfill.c
+[122]    3 ( 2) - hdf5/hl/tools/h5watch/h5watch.c
+[123]    3 ( 1) - hdf5/hl/tools/gif2h5/decompress.c
+[124]    3 ( 2) - hdf5/test/lheap.c
+[125]    3 ( 2) - hdf5/test/flush1.c
+[126]    3 ( 3) - hdf5/test/unregister.c
+[127]    3 ( 2) - hdf5/src/H5FDcore.c
+[128]    3 ( 2) - hdf5/test/use_common.c
+[129]    3 ( 1) - hdf5/test/tskiplist.c
+[130]    3 ( 1) - hdf5/tools/h5repack/h5repack_filters.c
+[131]    3 ( 2) - hdf5/src/H5PL.c
+[132]    3 ( 3) - hdf5/hl/tools/gif2h5/h52gifgentst.c
+[133]    2 ( 1) - hdf5/src/H5Fsuper_cache.c
+[134]    2 ( 2) - hdf5/src/H5Fprivate.h
+[135]    2 ( 1) - hdf5/tools/misc/vds/UC_3.h
+[136]    2 ( 1) - hdf5/src/H5FDmulti.c
+[137]    2 ( 1) - hdf5/src/H5Zshuffle.c
+[138]    2 ( 2) - hdf5/test/tchecksum.c
+[139]    2 ( 1) - hdf5/src/H5HP.c
+[140]    2 ( 1) - hdf5/hl/tools/h5watch/extend_dset.c
+[141]    2 ( 1) - hdf5/test/extend.c
+[142]    2 ( 1) - hdf5/test/gen_cross.c
+[143]    2 ( 2) - hdf5/tools/misc/vds/UC_4_printf_gen.c
+[144]    2 ( 1) - hdf5/test/H5srcdir.h
+[145]    2 ( 1) - hdf5/tools/lib/io_timer.c
+[146]    2 ( 1) - hdf5/test/objcopy.c
+[147]    2 ( 1) - hdf5/tools/h5jam/h5jamgentest.c
+[148]    2 ( 1) - hdf5/hl/tools/gif2h5/hdfgifwr.c
+[149]    2 ( 1) - hdf5/src/H5FDint.c
+[150]    2 ( 1) - hdf5/tools/h5jam/h5jam.c
+[151]    2 ( 1) - hdf5/test/dtransform.c
+[152]    2 ( 2) - hl/src/H5LTparse.c
+[153]    2 ( 1) - hdf5/src/H5Dlayout.c
+[154]    2 ( 1) - hdf5/src/H5Gloc.c
+[155]    2 ( 1) - hdf5/tools/h5import/h5importtest.c
+[156]    2 ( 1) - hdf5/src/H5Odtype.c
+[157]    2 ( 1) - hdf5/test/vds.c
+[158]    2 ( 2) - hdf5/tools/misc/vds/UC_2_two_dims_gen.c
+[159]    2 ( 1) - hdf5/src/H5Pint.c
+[160]    2 ( 2) - hdf5/src/H5Gnode.c
+[161]    2 ( 2) - hdf5/test/ttst.c
+[162]    2 ( 1) - hdf5/src/H5FD.c
+[163]    2 ( 1) - hdf5/hl/test/test_dset_append.c
+[164]    2 ( 1) - hdf5/src/H5HF.c
+[165]    2 ( 1) - hdf5/test/err_compat.c
+[166]    1 ( 1) - hdf5/test/swmr_sparse_writer.c
+[167]    1 ( 1) - hdf5/src/H5EA.c
+[168]    1 ( 1) - hdf5/src/H5Pdcpl.c
+[169]    1 ( 1) - hdf5/src/H5Gent.c
+[170]    1 ( 1) - hdf5/src/H5Fpkg.h
+[171]    1 ( 1) - hdf5/hl/src/H5LTparse.c
+[172]    1 ( 1) - hdf5/src/H5FSstat.c
+[173]    1 ( 1) - hdf5/test/earray.c
+[174]    1 ( 1) - hdf5/test/gen_file_image.c
+[175]    1 ( 1) - hdf5/src/H5FA.c
+[176]    1 ( 1) - hdf5/test/ohdr.c
+[177]    1 ( 1) - hdf5/test/testhdf5.h
+[178]    1 ( 1) - hdf5/src/H5MFaggr.c
+[179]    1 ( 1) - hdf5/test/cache_api.c
+[180]    1 ( 1) - hdf5/src/H5Eprivate.h
+[181]    1 ( 1) - H5lib_settings.c
+[182]    1 ( 1) - hdf5/src/H5HFman.c
+[183]    1 ( 1) - hdf5/src/H5Fsuper.c
+[184]    1 ( 1) - hdf5/test/swmr_reader.c
+[185]    1 ( 1) - hdf5/src/H5Tcompound.c
+[186]    1 ( 1) - hdf5/test/testframe.c
+[187]    1 ( 1) - hdf5/src/H5Gpkg.h
+[188]    1 ( 1) - hdf5/src/H5FLprivate.h
+[189]    1 ( 1) - hdf5/src/H5Osdspace.c
+[190]    1 ( 1) - hdf5/test/mtime.c
+[191]    1 ( 1) - hdf5/tools/lib/h5tools_ref.c
+[192]    1 ( 1) - hdf5/src/H5Gname.c
+[193]    1 ( 1) - hdf5/test/swmr_remove_writer.c
+[194]    1 ( 1) - hdf5/src/H5AC.c
+[195]    1 ( 1) - hdf5/test/dynlib3.c
+[196]    1 ( 1) - hdf5/src/H5Oattr.c
+[197]    1 ( 1) - hdf5/tools/h5repack/h5repack_copy.c
+[198]    1 ( 1) - hdf5/test/external.c
+[199]    1 ( 1) - hdf5/src/H5Opline.c
+[200]    1 ( 1) - hdf5/test/gen_deflate.c
+[201]    1 ( 1) - hdf5/test/swmr_remove_reader.c
+[202]    1 ( 1) - hdf5/src/H5FDlog.c
+[203]    1 ( 1) - hdf5/test/swmr_common.c
+[204]    1 ( 1) - hdf5/src/H5HG.c
+[205]    1 ( 1) - hdf5/src/H5HFsection.c
+[206]    1 ( 1) - hdf5/src/H5Ocopy.c
+[207]    1 ( 1) - hdf5/test/tconfig.c
+[208]    1 ( 1) - hdf5/test/pool.c
+[209]    1 ( 1) - hdf5/src/H5Tconv.c
+[210]    1 ( 1) - hdf5/test/efc.c
+[211]    1 ( 1) - hdf5/src/H5Fio.c
+[212]    1 ( 1) - hdf5/src/H5Olayout.c
+[213]    1 ( 1) - hdf5/src/H5F.c
+[214]    1 ( 1) - hdf5/src/H5public.h
+[215]    1 ( 1) - hdf5/src/H5trace.c

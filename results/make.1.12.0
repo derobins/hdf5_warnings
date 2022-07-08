@@ -1,0 +1,2210 @@
+Making all in src
+make[1]: Entering directory '/home/derobins/hdf5_devel/develop/build/src'
+make  all-am
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/src'
+  CC       H5.lo
+  CC       H5checksum.lo
+  CC       H5dbg.lo
+  CC       H5make_libsettings.o
+  CC       H5timer.lo
+  CC       H5system.lo
+  CC       H5trace.lo
+  CC       H5A.lo
+  CC       H5Abtree2.lo
+  CC       H5Adense.lo
+  CC       H5Adeprec.lo
+  CC       H5Aint.lo
+  CC       H5Atest.lo
+  CC       H5AC.lo
+  CC       H5ACdbg.lo
+  CC       H5ACproxy_entry.lo
+  CC       H5B.lo
+  CC       H5Bcache.lo
+  CC       H5Bdbg.lo
+  CC       H5B2.lo
+  CC       H5B2cache.lo
+  CC       H5B2dbg.lo
+  CC       H5B2hdr.lo
+  CC       H5B2int.lo
+  CC       H5B2internal.lo
+  CC       H5B2leaf.lo
+../../hdf5/src/H5B2int.c: In function ‘H5B2__iterate_node’:
+../../hdf5/src/H5B2int.c:1530:68: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1530 |         if(NULL == (internal = H5B2__protect_internal(hdr, parent, (H5B2_node_ptr_t *)curr_node, depth, FALSE, H5AC__READ_ONLY_FLAG))) /* Casting away const OK -QAK */
+      |                                                                    ^
+../../hdf5/src/H5B2int.c:1549:60: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1549 |         if(NULL == (leaf = H5B2__protect_leaf(hdr, parent, (H5B2_node_ptr_t *)curr_node, FALSE, H5AC__READ_ONLY_FLAG)))   /* Casting away const OK -QAK */
+      |                                                            ^
+../../hdf5/src/H5B2int.c: In function ‘H5B2__delete_node’:
+../../hdf5/src/H5B2int.c:1640:68: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1640 |         if(NULL == (internal = H5B2__protect_internal(hdr, parent, (H5B2_node_ptr_t *)curr_node, depth, FALSE, H5AC__NO_FLAGS_SET)))   /* Casting away const OK -QAK */
+      |                                                                    ^
+../../hdf5/src/H5B2int.c:1657:60: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1657 |         if(NULL == (leaf = H5B2__protect_leaf(hdr, parent, (H5B2_node_ptr_t *)curr_node, FALSE, H5AC__NO_FLAGS_SET)))     /* Casting away const OK -QAK */
+      |                                                            ^
+../../hdf5/src/H5B2int.c: In function ‘H5B2__node_size’:
+../../hdf5/src/H5B2int.c:1716:64: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1716 |     if(NULL == (internal = H5B2__protect_internal(hdr, parent, (H5B2_node_ptr_t *)curr_node, depth, FALSE, H5AC__READ_ONLY_FLAG)))     /* Casting away const OK -QAK */
+      |                                                                ^
+../../hdf5/src/H5B2int.c: In function ‘H5B2__update_flush_depend’:
+../../hdf5/src/H5B2int.c:1819:77: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1819 |             if(NULL == (child_int = H5B2__protect_internal(hdr, new_parent, (H5B2_node_ptr_t *)node_ptr, (uint16_t)(depth - 1), FALSE, H5AC__NO_FLAGS_SET)))      /* Casting away const OK -QAK */
+      |                                                                             ^
+../../hdf5/src/H5B2int.c:1835:74: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1835 |             if(NULL == (child_leaf = H5B2__protect_leaf(hdr, new_parent, (H5B2_node_ptr_t *)node_ptr, FALSE, H5AC__NO_FLAGS_SET)))    /* Casting away const OK -QAK */
+      |                                                                          ^
+  CC       H5B2stat.lo
+  CC       H5B2test.lo
+  CC       H5C.lo
+  CC       H5Cdbg.lo
+  CC       H5Cepoch.lo
+  CC       H5Cimage.lo
+  CC       H5Clog.lo
+  CC       H5Clog_json.lo
+  CC       H5Clog_trace.lo
+  CC       H5Cprefetched.lo
+  CC       H5Cquery.lo
+  CC       H5Ctag.lo
+  CC       H5Ctest.lo
+  CC       H5CS.lo
+  CC       H5CX.lo
+  CC       H5D.lo
+  CC       H5Dbtree.lo
+  CC       H5Dbtree2.lo
+  CC       H5Dchunk.lo
+  CC       H5Dcompact.lo
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__chunk_io_init’:
+../../hdf5/src/H5Dchunk.c:1132:60: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1132 |     if((file_space_normalized = H5S_hyper_normalize_offset((H5S_t *)file_space, old_offset)) < 0)
+      |                                                            ^
+../../hdf5/src/H5Dchunk.c:1169:41: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1169 |         if(H5S_hyper_denormalize_offset((H5S_t *)file_space, old_offset) < 0)       /* (Casting away const OK -QAK) */
+      |                                         ^
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__create_chunk_map_single’:
+../../hdf5/src/H5Dchunk.c:1595:26: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1595 |     chunk_info->mspace = (H5S_t *)fm->mem_space;
+      |                          ^
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__create_chunk_file_map_hyper’:
+../../hdf5/src/H5Dchunk.c:1878:40: warning: passing argument 1 of ‘H5S_combine_hyperslab’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1878 |             if(H5S_combine_hyperslab(fm->file_space, H5S_SELECT_AND, coords, NULL, fm->chunk_dim, NULL, &tmp_fchunk) < 0)
+      |                                      ~~^~~~~~~~~~~~
+In file included from ../../hdf5/src/H5Dprivate.h:26,
+                 from ../../hdf5/src/H5Dpkg.h:30,
+                 from ../../hdf5/src/H5Dchunk.c:56:
+../../hdf5/src/H5Sprivate.h:283:44: note: expected ‘H5S_t *’ but argument is of type ‘const H5S_t *’
+  283 | H5_DLL herr_t H5S_combine_hyperslab(H5S_t *old_space, H5S_seloper_t op,
+      |                                     ~~~~~~~^~~~~~~~~
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__create_chunk_mem_map_hyper’:
+../../hdf5/src/H5Dchunk.c:2028:30: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2028 |         chunk_info->mspace = (H5S_t *)fm->mem_space;
+      |                              ^
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__create_chunk_mem_map_1d’:
+../../hdf5/src/H5Dchunk.c:2151:30: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2151 |         chunk_info->mspace = (H5S_t *)fm->mem_space;
+      |                              ^
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__chunk_allocate’:
+../../hdf5/src/H5Dchunk.c:4438:17: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 4438 |                 (void *)pline, (H5MM_free_t)H5D__chunk_mem_xfree, (void *)pline,
+      |                 ^
+../../hdf5/src/H5Dchunk.c:4438:32: warning: cast between incompatible function types from ‘void * (*)(void *, const void *)’ to ‘void (*)(void *, void *)’ [-Wcast-function-type]
+ 4438 |                 (void *)pline, (H5MM_free_t)H5D__chunk_mem_xfree, (void *)pline,
+      |                                ^
+../../hdf5/src/H5Dchunk.c:4438:67: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 4438 |                 (void *)pline, (H5MM_free_t)H5D__chunk_mem_xfree, (void *)pline,
+      |                                                                   ^
+../../hdf5/src/H5Dchunk.c:4487:22: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4487 |     idx_info.storage = sc;
+      |                      ^
+../../hdf5/src/H5Dchunk.c: In function ‘H5D__chunk_copy_cb’:
+../../hdf5/src/H5Dchunk.c:6115:74: warning: passing argument 3 of ‘H5O_copy_expand_ref’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 6115 |             if(H5O_copy_expand_ref(udata->file_src, udata->tid_src, udata->dt_src, buf, nbytes, udata->idx_info_dst->f, bkg, udata->cpy_info) < 0)
+      |                                                                     ~~~~~^~~~~~~~
+In file included from ../../hdf5/src/H5Dprivate.h:25:
+../../hdf5/src/H5Oprivate.h:986:74: note: expected ‘H5T_t *’ but argument is of type ‘const H5T_t *’
+  986 | H5_DLL herr_t H5O_copy_expand_ref(H5F_t *file_src, hid_t tid_src, H5T_t *dt_src,
+      |                                                                   ~~~~~~~^~~~~~
+  CC       H5Dcontig.lo
+  CC       H5Ddbg.lo
+  CC       H5Ddeprec.lo
+  CC       H5Dearray.lo
+  CC       H5Defl.lo
+  CC       H5Dfarray.lo
+  CC       H5Dfill.lo
+  CC       H5Dint.lo
+  CC       H5Dio.lo
+../../hdf5/src/H5Dint.c: In function ‘H5D__init_type’:
+../../hdf5/src/H5Dint.c:633:30: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  633 |         dset->shared->type = (H5T_t *)type; /* (Cast away const OK - QAK) */
+      |                              ^
+  CC       H5Dlayout.lo
+In file included from ../../hdf5/src/H5Dint.c:24:
+../../hdf5/src/H5Dint.c: In function ‘H5D_nameof’:
+../../hdf5/src/H5Dint.c:2253:49: warning: return discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2253 |     FUNC_LEAVE_NOAPI(dataset ? &(dataset->path) : NULL)
+../../hdf5/src/H5private.h:2339:12: note: in definition of macro ‘FUNC_LEAVE_NOAPI’
+ 2339 |     return(ret_value);                                                        \
+      |            ^~~~~~~~~
+../../hdf5/src/H5Dio.c: In function ‘H5D__read’:
+../../hdf5/src/H5Dio.c:499:15: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  499 |         buf = (void *)adj_buf;          /* Casting away 'const' OK -QAK */
+      |               ^
+  CC       H5Dnone.lo
+  CC       H5Doh.lo
+  CC       H5Dscatgath.lo
+  CC       H5Dselect.lo
+  CC       H5Dsingle.lo
+  CC       H5Dtest.lo
+  CC       H5Dvirtual.lo
+  CC       H5E.lo
+  CC       H5Edeprec.lo
+  CC       H5Eint.lo
+  CC       H5EA.lo
+  CC       H5EAcache.lo
+  CC       H5EAdbg.lo
+../../hdf5/src/H5Eint.c: In function ‘H5E__clear_entries’:
+../../hdf5/src/H5Eint.c:886:58: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  886 |             error->func_name = (const char *) H5MM_xfree((void *)error->func_name);        /* Casting away const OK - QAK */
+      |                                                          ^
+../../hdf5/src/H5Eint.c:888:58: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  888 |             error->file_name = (const char *) H5MM_xfree((void *)error->file_name);        /* Casting away const OK - QAK */
+      |                                                          ^
+../../hdf5/src/H5Eint.c:890:53: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  890 |             error->desc = (const char *) H5MM_xfree((void *)error->desc);     /* Casting away const OK - QAK */
+      |                                                     ^
+  CC       H5EAdblkpage.lo
+  CC       H5EAdblock.lo
+  CC       H5EAhdr.lo
+  CC       H5EAiblock.lo
+  CC       H5EAint.lo
+  CC       H5EAsblock.lo
+  CC       H5EAstat.lo
+  CC       H5EAtest.lo
+  CC       H5F.lo
+  CC       H5Faccum.lo
+  CC       H5Fcwfs.lo
+  CC       H5Fdbg.lo
+  CC       H5Fdeprec.lo
+  CC       H5Fefc.lo
+  CC       H5Ffake.lo
+  CC       H5Fint.lo
+  CC       H5Fio.lo
+  CC       H5Fmount.lo
+  CC       H5Fquery.lo
+  CC       H5Fsfile.lo
+  CC       H5Fspace.lo
+  CC       H5Fsuper.lo
+  CC       H5Fsuper_cache.lo
+  CC       H5Ftest.lo
+  CC       H5FA.lo
+  CC       H5FAcache.lo
+  CC       H5FAdbg.lo
+  CC       H5FAdblock.lo
+  CC       H5FAdblkpage.lo
+  CC       H5FAhdr.lo
+  CC       H5FAint.lo
+  CC       H5FAstat.lo
+  CC       H5FAtest.lo
+  CC       H5FD.lo
+  CC       H5FDcore.lo
+  CC       H5FDfamily.lo
+  CC       H5FDhdfs.lo
+  CC       H5FDint.lo
+../../hdf5/src/H5FD.c: In function ‘H5FD_fapl_close’:
+../../hdf5/src/H5FD.c:594:40: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  594 |                 if((driver->fapl_free)((void *)driver_info) < 0)        /* Casting away const OK -QAK */
+      |                                        ^
+../../hdf5/src/H5FD.c:598:42: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  598 |                 driver_info = H5MM_xfree((void *)driver_info);        /* Casting away const OK -QAK */
+      |                                          ^
+  CC       H5FDlog.lo
+  CC       H5FDmulti.lo
+  CC       H5FDsec2.lo
+  CC       H5FDspace.lo
+  CC       H5FDstdio.lo
+  CC       H5FDtest.lo
+  CC       H5FL.lo
+  CC       H5FO.lo
+  CC       H5FS.lo
+  CC       H5FScache.lo
+  CC       H5FSdbg.lo
+  CC       H5FSint.lo
+  CC       H5FSsection.lo
+  CC       H5FSstat.lo
+  CC       H5FStest.lo
+  CC       H5G.lo
+  CC       H5Gbtree2.lo
+  CC       H5Gcache.lo
+  CC       H5Gcompact.lo
+  CC       H5Gdense.lo
+  CC       H5Gdeprec.lo
+  CC       H5Gent.lo
+  CC       H5Gint.lo
+  CC       H5Glink.lo
+  CC       H5Gloc.lo
+../../hdf5/src/H5Gent.c: In function ‘H5G__ent_copy’:
+../../hdf5/src/H5Gent.c:343:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  343 |         H5G__ent_reset((H5G_entry_t *)src);
+      |                        ^
+In file included from ../../hdf5/src/H5Gint.c:35:
+../../hdf5/src/H5Gint.c: In function ‘H5G_nameof’:
+../../hdf5/src/H5Gint.c:587:41: warning: return discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  587 |     FUNC_LEAVE_NOAPI(grp ? &(grp->path) : NULL)
+../../hdf5/src/H5private.h:2339:12: note: in definition of macro ‘FUNC_LEAVE_NOAPI’
+ 2339 |     return(ret_value);                                                        \
+      |            ^~~~~~~~~
+  CC       H5Gname.lo
+../../hdf5/src/H5Gloc.c: In function ‘H5G__loc_insert’:
+../../hdf5/src/H5Gloc.c:607:16: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  607 |     lnk.name = (char *)name;
+      |                ^
+../../hdf5/src/H5Gloc.c: In function ‘H5G__loc_set_comment_cb’:
+../../hdf5/src/H5Gloc.c:967:21: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  967 |         comment.s = (char *)udata->comment;
+      |                     ^
+  CC       H5Gnode.lo
+  CC       H5Gobj.lo
+  CC       H5Goh.lo
+  CC       H5Groot.lo
+  CC       H5Gstab.lo
+../../hdf5/src/H5Gname.c: In function ‘H5G_name_copy’:
+../../hdf5/src/H5Gname.c:535:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  535 |         H5G_name_reset((H5G_name_t *)src);
+      |                        ^
+  CC       H5Gtest.lo
+../../hdf5/src/H5Gnode.c: In function ‘H5G__node_copy’:
+../../hdf5/src/H5Gnode.c:1269:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1269 |             grp_loc.oloc = (H5O_loc_t *)src_oloc;
+      |                            ^
+../../hdf5/src/H5Gobj.c: In function ‘H5G__obj_create_real’:
+../../hdf5/src/H5Gobj.c:265:67: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  265 |         if(H5O_msg_create(oloc, H5O_LINFO_ID, 0, H5O_UPDATE_TIME, (void *)linfo) < 0)
+      |                                                                   ^
+../../hdf5/src/H5Gobj.c:270:73: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  270 |         if(H5O_msg_create(oloc, H5O_GINFO_ID, H5O_MSG_FLAG_CONSTANT, 0, (void *)ginfo) < 0)
+      |                                                                         ^
+../../hdf5/src/H5Gobj.c:276:77: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  276 |             if(H5O_msg_create(oloc, H5O_PLINE_ID, H5O_MSG_FLAG_CONSTANT, 0, (void *)pline) < 0)
+      |                                                                             ^
+../../hdf5/src/H5Gobj.c: In function ‘H5G_obj_stab_to_new_cb’:
+../../hdf5/src/H5Gobj.c:426:51: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  426 |     if(H5G_obj_insert(udata->grp_oloc, lnk->name, (H5O_link_t *)lnk, FALSE, H5O_TYPE_UNKNOWN, NULL) < 0)
+      |                                                   ^
+  CC       H5Gtraverse.lo
+  CC       H5HF.lo
+  CC       H5HFbtree2.lo
+  CC       H5HFcache.lo
+  CC       H5HFdbg.lo
+  CC       H5HFdblock.lo
+../../hdf5/src/H5Gtraverse.c: In function ‘H5G__traverse_real’:
+../../hdf5/src/H5Gtraverse.c:732:52: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  732 |                     if(H5O_msg_reset(H5O_GINFO_ID, (void *)ginfo) < 0)
+      |                                                    ^
+../../hdf5/src/H5Gtraverse.c:736:52: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  736 |                     if(H5O_msg_reset(H5O_LINFO_ID, (void *)linfo) < 0)
+      |                                                    ^
+../../hdf5/src/H5Gtraverse.c:740:52: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  740 |                     if(H5O_msg_reset(H5O_PLINE_ID, (void *)pline) < 0)
+      |                                                    ^
+../../hdf5/src/H5HF.c: In function ‘H5HF_op_write’:
+../../hdf5/src/H5HF.c:134:17: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  134 |     H5MM_memcpy((void *)obj, op_data, obj_len);    /* Casting away const OK -QAK */
+      |                 ^
+../../hdf5/src/H5HF.c: In function ‘H5HF_insert’:
+../../hdf5/src/H5HF.c:378:41: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  378 |         if(H5HF__huge_insert(hdr, size, (void *)obj, id) < 0)
+      |                                         ^
+  CC       H5HFdtable.lo
+../../hdf5/src/H5HFcache.c: In function ‘H5HF__cache_hdr_serialize’:
+../../hdf5/src/H5HFcache.c:772:12: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  772 |     hdr->f = f;
+      |            ^
+../../hdf5/src/H5HFcache.c: In function ‘H5HF__cache_iblock_serialize’:
+../../hdf5/src/H5HFcache.c:1362:12: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1362 |     hdr->f = f;
+      |            ^
+../../hdf5/src/H5HFcache.c: In function ‘H5HF__cache_dblock_verify_chksum’:
+../../hdf5/src/H5HFcache.c:1691:20: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1691 |         read_buf = (void *)image;       /* Casting away const OK - QAK */
+      |                    ^
+  CC       H5HFhdr.lo
+  CC       H5HFhuge.lo
+  CC       H5HFiblock.lo
+  CC       H5HFiter.lo
+  CC       H5HFman.lo
+  CC       H5HFsection.lo
+../../hdf5/src/H5HFman.c: In function ‘H5HF__man_write’:
+../../hdf5/src/H5HFman.c:505:50: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  505 |     if(H5HF__man_op_real(hdr, id, H5HF_op_write, (void *)obj, H5HF_OP_MODIFY) < 0)
+      |                                                  ^
+  CC       H5HFspace.lo
+  CC       H5HFstat.lo
+  CC       H5HFtest.lo
+  CC       H5HFtiny.lo
+  CC       H5HG.lo
+  CC       H5HGcache.lo
+  CC       H5HGdbg.lo
+  CC       H5HGquery.lo
+  CC       H5HL.lo
+  CC       H5HLcache.lo
+  CC       H5HLdbg.lo
+  CC       H5HLint.lo
+  CC       H5HLprfx.lo
+  CC       H5HLdblk.lo
+  CC       H5HP.lo
+  CC       H5I.lo
+  CC       H5Itest.lo
+  CC       H5L.lo
+  CC       H5Ldeprec.lo
+  CC       H5Lexternal.lo
+  CC       H5M.lo
+  CC       H5MF.lo
+../../hdf5/src/H5I.c: In function ‘H5I__clear_type_cb’:
+../../hdf5/src/H5I.c:610:81: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  610 |         if(udata->type_ptr->cls->free_func && (udata->type_ptr->cls->free_func)((void *)id->obj_ptr) < 0) { /* (Casting away const OK -QAK) */
+      |                                                                                 ^
+In file included from ../../hdf5/src/H5I.c:38:
+../../hdf5/src/H5I.c: In function ‘H5I__destroy_type’:
+../../hdf5/src/H5I.c:716:48: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  716 |         type_ptr->cls = H5FL_FREE(H5I_class_t, (void *)type_ptr->cls);
+      |                                                ^
+../../hdf5/src/H5FLprivate.h:130:65: note: in definition of macro ‘H5FL_FREE’
+  130 | #define H5FL_FREE(t,obj) (t *)H5FL_reg_free(&(H5FL_REG_NAME(t)),obj)
+      |                                                                 ^~~
+../../hdf5/src/H5I.c: In function ‘H5I_subst’:
+../../hdf5/src/H5I.c:912:17: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  912 |     ret_value = (void *)id_ptr->obj_ptr;        /* (Casting away const OK -QAK) */
+      |                 ^
+../../hdf5/src/H5I.c: In function ‘H5I_object’:
+../../hdf5/src/H5I.c:945:21: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  945 |         ret_value = (void *)id_ptr->obj_ptr;        /* (Casting away const OK -QAK) */
+      |                     ^
+../../hdf5/src/H5I.c: In function ‘H5I_object_verify’:
+../../hdf5/src/H5I.c:1014:21: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1014 |         ret_value = (void *)id_ptr->obj_ptr;        /* (Casting away const OK -QAK) */
+      |                     ^
+../../hdf5/src/H5I.c: In function ‘H5I__remove_common’:
+../../hdf5/src/H5I.c:1238:17: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1238 |     ret_value = (void *)curr_id->obj_ptr;       /* (Casting away const OK -QAK) */
+      |                 ^
+../../hdf5/src/H5I.c: In function ‘H5I_dec_ref’:
+../../hdf5/src/H5I.c:1376:68: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1376 |         if(!type_ptr->cls->free_func || (type_ptr->cls->free_func)((void *)id_ptr->obj_ptr) >= 0) {
+      |                                                                    ^
+../../hdf5/src/H5I.c: In function ‘H5I__iterate_cb’:
+../../hdf5/src/H5I.c:2083:31: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2083 |         obj_ptr = H5I__unwrap((void *)item->obj_ptr, type);
+      |                               ^
+../../hdf5/src/H5I.c: In function ‘H5I__find_id_cb’:
+../../hdf5/src/H5I.c:2316:31: warning: passing argument 1 of ‘H5I__unwrap’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2316 |     obj_ptr = H5I__unwrap(item->obj_ptr, type);
+      |                           ~~~~^~~~~~~~~
+../../hdf5/src/H5I.c:473:19: note: expected ‘void *’ but argument is of type ‘const void *’
+  473 | H5I__unwrap(void *obj_ptr, H5I_type_t type)
+      |             ~~~~~~^~~~~~~
+../../hdf5/src/H5I.c: In function ‘H5I__id_dump_cb’:
+../../hdf5/src/H5I.c:2426:51: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2426 |             obj_ptr = (void *)H5T_get_actual_type((H5T_t *)dt); /* Casting away const OK - QAK */
+      |                                                   ^
+../../hdf5/src/H5L.c: In function ‘H5L__link_cb’:
+../../hdf5/src/H5L.c:1884:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1884 |     udata->lnk->name = (char *)name;
+      |                        ^
+../../hdf5/src/H5L.c: In function ‘H5L__move_dest_cb’:
+../../hdf5/src/H5L.c:2676:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2676 |     udata->lnk->name = (char *)name;
+      |                        ^
+../../hdf5/src/H5L.c: In function ‘H5L__link_copy_file’:
+../../hdf5/src/H5L.c:3431:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 3431 |         lnk_grp_loc.oloc = (H5O_loc_t *)src_oloc;    /* Casting away const OK -QAK */
+      |                            ^
+  CC       H5MFaggr.lo
+  CC       H5MFdbg.lo
+  CC       H5MFsection.lo
+  CC       H5MM.lo
+  CC       H5MP.lo
+  CC       H5MPtest.lo
+  CC       H5O.lo
+  CC       H5Odeprec.lo
+  CC       H5Oainfo.lo
+  CC       H5Oalloc.lo
+  CC       H5Oattr.lo
+  CC       H5Oattribute.lo
+  CC       H5Obogus.lo
+  CC       H5Obtreek.lo
+  CC       H5Ocache.lo
+  CC       H5Ocache_image.lo
+  CC       H5Ochunk.lo
+  CC       H5Ocont.lo
+../../hdf5/src/H5Ocache.c: In function ‘H5O__chunk_deserialize’:
+../../hdf5/src/H5Ocache.c:1466:25: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1466 |             mesg->raw = (uint8_t *)chunk_image;        /* Casting away const OK - QAK */
+      |                         ^
+../../hdf5/src/H5Ocache.c: In function ‘H5O__chunk_serialize’:
+../../hdf5/src/H5Ocache.c:1669:30: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1669 |             if(H5O_msg_flush((H5F_t *)f, oh, curr_msg) < 0)
+      |                              ^
+  CC       H5Ocopy.lo
+  CC       H5Ocopy_ref.lo
+  CC       H5Odbg.lo
+  CC       H5Odrvinfo.lo
+  CC       H5Odtype.lo
+  CC       H5Oefl.lo
+  CC       H5Ofill.lo
+  CC       H5Oflush.lo
+  CC       H5Ofsinfo.lo
+  CC       H5Oginfo.lo
+  CC       H5Oint.lo
+  CC       H5Olayout.lo
+  CC       H5Olinfo.lo
+  CC       H5Olink.lo
+  CC       H5Omessage.lo
+  CC       H5Omtime.lo
+  CC       H5Oname.lo
+  CC       H5Onull.lo
+  CC       H5Opline.lo
+  CC       H5Orefcount.lo
+  CC       H5Osdspace.lo
+  CC       H5Oshared.lo
+  CC       H5Oshmesg.lo
+  CC       H5Ostab.lo
+  CC       H5Otest.lo
+  CC       H5Ounknown.lo
+  CC       H5P.lo
+  CC       H5Pacpl.lo
+  CC       H5Pdapl.lo
+  CC       H5Pdcpl.lo
+  CC       H5Pdeprec.lo
+  CC       H5Pdxpl.lo
+  CC       H5Pencdec.lo
+  CC       H5Pfapl.lo
+  CC       H5Pfcpl.lo
+  CC       H5Pfmpl.lo
+  CC       H5Pgcpl.lo
+../../hdf5/src/H5Pfapl.c: In function ‘H5P__file_driver_free’:
+../../hdf5/src/H5Pfapl.c:1170:44: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1170 |                     if((driver->fapl_free)((void *)info->driver_info) < 0)      /* Casting away const OK -QAK */
+      |                                            ^
+../../hdf5/src/H5Pfapl.c:1174:32: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1174 |                     H5MM_xfree((void *)info->driver_info);      /* Casting away const OK -QAK */
+      |                                ^
+../../hdf5/src/H5Pfapl.c: In function ‘H5P_set_vol’:
+../../hdf5/src/H5Pfapl.c:5410:35: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 5410 |         vol_prop.connector_info = (void *)vol_info;
+      |                                   ^
+  CC       H5Pint.lo
+  CC       H5Plapl.lo
+  CC       H5Plcpl.lo
+  CC       H5Pmapl.lo
+  CC       H5Pmcpl.lo
+  CC       H5Pocpl.lo
+  CC       H5Pocpypl.lo
+  CC       H5Pstrcpl.lo
+  CC       H5Ptest.lo
+  CC       H5PB.lo
+  CC       H5PL.lo
+  CC       H5PLint.lo
+  CC       H5PLpath.lo
+  CC       H5PLplugin_cache.lo
+  CC       H5R.lo
+  CC       H5Rdeprec.lo
+  CC       H5Rint.lo
+  CC       H5UC.lo
+  CC       H5RS.lo
+  CC       H5S.lo
+  CC       H5Sall.lo
+../../hdf5/src/H5RS.c: In function ‘H5RS_wrap’:
+../../hdf5/src/H5RS.c:151:20: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  151 |     ret_value->s = (char *)s;
+      |                    ^
+  CC       H5Sdbg.lo
+  CC       H5Sdeprec.lo
+  CC       H5Shyper.lo
+  CC       H5Snone.lo
+../../hdf5/src/H5Shyper.c: In function ‘H5S__hyper_iter_init’:
+../../hdf5/src/H5Shyper.c:603:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  603 |         H5S__hyper_rebuild((H5S_t *)space);     /* Casting away const OK -NAF */
+      |                            ^
+../../hdf5/src/H5Shyper.c: In function ‘H5S__hyper_is_regular’:
+../../hdf5/src/H5Shyper.c:5363:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 5363 |         H5S__hyper_rebuild((H5S_t *)space);     /* Casting away const OK -NAF */
+      |                            ^
+../../hdf5/src/H5Shyper.c: In function ‘H5S__hyper_shape_same’:
+../../hdf5/src/H5Shyper.c:5629:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 5629 |         H5S__hyper_rebuild((H5S_t *)space1);    /* Casting away const OK -QAK */
+      |                            ^
+../../hdf5/src/H5Shyper.c:5631:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 5631 |         H5S__hyper_rebuild((H5S_t *)space2);    /* Casting away const OK -QAK */
+      |                            ^
+../../hdf5/src/H5Shyper.c:5676:42: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 5676 |             if(H5S__hyper_generate_spans((H5S_t *)space1) < 0)  /* Casting away const OK -QAK */
+      |                                          ^
+../../hdf5/src/H5Shyper.c:5679:42: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 5679 |             if(H5S__hyper_generate_spans((H5S_t *)space2) < 0)  /* Casting away const OK -QAK */
+      |                                          ^
+  CC       H5Spoint.lo
+  CC       H5Sselect.lo
+../../hdf5/src/H5Shyper.c: In function ‘H5S__hyper_intersect_block’:
+../../hdf5/src/H5Shyper.c:6300:28: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 6300 |         H5S__hyper_rebuild((H5S_t *)space);     /* Casting away const OK -QAK */
+      |                            ^
+  CC       H5Stest.lo
+../../hdf5/src/H5Shyper.c: In function ‘H5S__hyper_proj_int_iterate’:
+../../hdf5/src/H5Shyper.c:11431:74: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+11431 |         H5S_HYPER_PROJ_INT_ADD_SKIP(udata, H5S__hyper_spans_nelem_helper((H5S_hyper_span_info_t *)ss_span_info, 0, udata->op_gen) * count, FAIL); /* Casting away const OK -NAF */
+      |                                                                          ^
+../../hdf5/src/H5Shyper.c:74:27: note: in definition of macro ‘H5S_HYPER_PROJ_INT_ADD_SKIP’
+   74 |         (UDATA)->skip += (ADD);                                 \
+      |                           ^~~
+../../hdf5/src/H5Shyper.c: In function ‘H5S__hyper_project_intersection’:
+../../hdf5/src/H5Shyper.c:11520:42: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+11520 |             if(H5S__hyper_generate_spans((H5S_t *)src_space) < 0)  /* Casting away const OK -NAF */
+      |                                          ^
+../../hdf5/src/H5Shyper.c:11540:42: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+11540 |             if(H5S__hyper_generate_spans((H5S_t *)dst_space) < 0)  /* Casting away const OK -NAF */
+      |                                          ^
+../../hdf5/src/H5Shyper.c:11558:38: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+11558 |         if(H5S__hyper_generate_spans((H5S_t *)src_intersect_space) < 0)  /* Casting away const OK -NAF */
+      |                                      ^
+  CC       H5SL.lo
+  CC       H5SM.lo
+../../hdf5/src/H5Sselect.c: In function ‘H5S_select_project_intersection’:
+../../hdf5/src/H5Sselect.c:2604:20: warning: size of ‘ss_iter’ 3160 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2604 |     H5S_sel_iter_t ss_iter;             /* Selection iterator for src_space */
+      |                    ^~~~~~~
+../../hdf5/src/H5Sselect.c:2606:20: warning: size of ‘ds_iter’ 3160 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2606 |     H5S_sel_iter_t ds_iter;             /* Selection iterator for dst_space */
+      |                    ^~~~~~~
+  CC       H5SMbtree2.lo
+../../hdf5/src/H5SL.c: In function ‘H5SL_release_common’:
+../../hdf5/src/H5SL.c:896:36: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  896 |             (void)(op)(node->item, (void *)node->key, op_data);
+      |                                    ^
+../../hdf5/src/H5SL.c: In function ‘H5SL_iterate’:
+../../hdf5/src/H5SL.c:2210:46: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2210 |             if((ret_value = (op)(node->item, (void *)node->key, op_data)) != 0)
+      |                                              ^
+../../hdf5/src/H5SL.c: In function ‘H5SL_try_free_safe’:
+../../hdf5/src/H5SL.c:2369:44: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2369 |             if((op_ret = (op)(node->item , (void *)node->key, op_data)) < 0)
+      |                                            ^
+  CC       H5SMcache.lo
+  CC       H5SMmessage.lo
+  CC       H5SMtest.lo
+  CC       H5ST.lo
+  CC       H5T.lo
+  CC       H5Tarray.lo
+  CC       H5Tbit.lo
+  CC       H5Tcommit.lo
+../../hdf5/src/H5T.c: In function ‘H5T_nameof’:
+../../hdf5/src/H5T.c:5375:23: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 5375 |             ret_value = &(dt->path);
+      |                       ^
+  CC       H5Tcompound.lo
+  CC       H5Tconv.lo
+  CC       H5Tcset.lo
+  CC       H5Tdbg.lo
+  CC       H5Tdeprec.lo
+  CC       H5Tenum.lo
+  CC       H5Tfields.lo
+  CC       H5Tfixed.lo
+  CC       H5Tfloat.lo
+  CC       H5detect.o
+  CC       H5Tnative.lo
+  CC       H5Toffset.lo
+  CC       H5Toh.lo
+  CC       H5Topaque.lo
+  CC       H5Torder.lo
+  CC       H5Tref.lo
+  CC       H5Tpad.lo
+  CC       H5Tprecis.lo
+  CC       H5Tstrpad.lo
+  CC       H5Tvisit.lo
+../../hdf5/src/H5Tref.c: In function ‘H5T__ref_disk_isnull’:
+../../hdf5/src/H5Tref.c:672:41: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  672 |         if(H5VL_blob_specific(src_file, (void *)p, H5VL_BLOB_ISNULL, isnull) < 0)
+      |                                         ^
+  CC       H5Tvlen.lo
+  CC       H5TS.lo
+  CC       H5VL.lo
+../../hdf5/src/H5Tvlen.c: In function ‘H5T__vlen_disk_delete’:
+../../hdf5/src/H5Tvlen.c:1030:41: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1030 |             if(H5VL_blob_specific(file, (void *)vl, H5VL_BLOB_DELETE) < 0)   /* Casting away 'const' OK -QAK */
+      |                                         ^
+  CC       H5VLcallback.lo
+  CC       H5VLint.lo
+  CC       H5VLnative.lo
+  CC       H5VLnative_attr.lo
+  CC       H5VLnative_blob.lo
+../../hdf5/src/H5VLint.c: In function ‘H5VL__free_cls’:
+../../hdf5/src/H5VLint.c:321:16: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  321 |     H5MM_xfree((void *)cls->name);      /* Casting away const OK -QAK */
+      |                ^
+../../hdf5/src/H5VLint.c: In function ‘H5VL_register_connector’:
+../../hdf5/src/H5VLint.c:1147:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1147 |             H5MM_xfree((void *)(saved->name));  /* Casting away const OK -QAK */
+      |                        ^
+  CC       H5VLnative_dataset.lo
+  CC       H5VLnative_datatype.lo
+  CC       H5VLnative_file.lo
+  CC       H5VLnative_group.lo
+  CC       H5VLnative_link.lo
+  CC       H5VLnative_introspect.lo
+  CC       H5VLnative_object.lo
+  CC       H5VLnative_token.lo
+  CC       H5VLpassthru.lo
+  CC       H5VM.lo
+  CC       H5WB.lo
+  CC       H5Z.lo
+  CC       H5Zdeflate.lo
+  CC       H5Zfletcher32.lo
+  CC       H5Znbit.lo
+  CC       H5Zshuffle.lo
+  CC       H5Zscaleoffset.lo
+  CC       H5Zszip.lo
+  CC       H5Ztrans.lo
+  CCLD     H5make_libsettings
+  CCLD     H5detect
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH`echo  |                  \
+	sed -e 's/-L/:/g' -e 's/ //g'`"                               \
+ ./H5make_libsettings  H5lib_settings.c  ||                               \
+    (test $HDF5_Make_Ignore && echo "*** Error ignored") ||          \
+    (rm -f H5lib_settings.c ; exit 1)
+  CC       H5lib_settings.lo
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH`echo  |                  \
+	sed -e 's/-L/:/g' -e 's/ //g'`"                               \
+ ./H5detect  H5Tinit.c  ||                               \
+    (test $HDF5_Make_Ignore && echo "*** Error ignored") ||          \
+    (rm -f H5Tinit.c ; exit 1)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       CC       H5Tinit.lo
+H5lib_settings.c:31:6: warning: size of ‘H5libhdf5_settings’ 5856 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   31 | char H5libhdf5_settings[]=
+      |      ^~~~~~~~~~~~~~~~~~
+  CCLD     libhdf5.la
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/src'
+make[1]: Leaving directory '/home/derobins/hdf5_devel/develop/build/src'
+Making all in test
+make[1]: Entering directory '/home/derobins/hdf5_devel/develop/build/test'
+  CC       h5test.lo
+  CC       testframe.lo
+  CC       cache_common.lo
+  CC       swmr_common.lo
+  CC       external_common.lo
+  CC       filter_plugin1_dsets.lo
+  CC       filter_plugin2_dsets.lo
+  CC       filter_plugin3_dsets.lo
+  CC       filter_plugin4_groups.lo
+  CC       null_vol_connector.lo
+  CC       gen_bad_ohdr.o
+  CC       gen_bogus.o
+  CC       gen_cross.o
+  CC       gen_deflate.o
+  CC       gen_filters.o
+  CC       gen_new_array.o
+  CC       gen_new_fill.o
+  CC       gen_new_group.o
+  CC       gen_new_mtime.o
+  CC       gen_new_super.o
+  CC       gen_noencoder.o
+  CC       gen_nullspace.o
+  CC       gen_udlinks.o
+  CC       space_overflow.o
+  CC       gen_filespace.o
+  CC       gen_specmetaread.o
+  CC       gen_sizes_lheap.o
+  CC       gen_file_image.o
+  CC       gen_plist.o
+  CC       gen_bad_offset.o
+  CC       gen_bounds.o
+  CC       testhdf5.o
+  CC       tarray.o
+  CC       tattr.o
+  CC       tchecksum.o
+  CC       tconfig.o
+  CC       tfile.o
+  CC       tgenprop.o
+  CC       th5o.o
+  CC       th5s.o
+../../hdf5/test/th5s.c:2465:9: warning: size of ‘chunk_data_dbl’ 1200000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2465 | double  chunk_data_dbl[50000][3];
+      |         ^~~~~~~~~~~~~~
+../../hdf5/test/th5s.c:2466:8: warning: size of ‘chunk_data_flt’ 600000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2466 | float  chunk_data_flt[50000][3];
+      |        ^~~~~~~~~~~~~~
+  CC       tcoords.o
+../../hdf5/test/tcoords.c: In function ‘test_multiple_ends’:
+../../hdf5/test/tcoords.c:410:9: warning: size of ‘data_buf’ 69120 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  410 |     int data_buf[4][5][3][4][2][3][6][2];
+      |         ^~~~~~~~
+../../hdf5/test/tcoords.c:446:9: warning: size of ‘mem5_buffer’ 7680 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  446 |     int mem5_buffer[4][5][1][4][2][1][6][2];
+      |         ^~~~~~~~~~~
+  CC       theap.o
+../../hdf5/test/tcoords.c:402:13: warning: stack usage might be 81952 bytes [-Wstack-usage=]
+  402 | static void test_multiple_ends(hid_t file, hbool_t is_chunked)
+      |             ^~~~~~~~~~~~~~~~~~
+../../hdf5/test/tcoords.c:661:1: warning: the frame size of 81872 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  661 | }
+      | ^
+  CC       tid.o
+  CC       titerate.o
+  CC       tmeta.o
+../../hdf5/test/tid.c: In function ‘basic_id_test’:
+../../hdf5/test/tid.c:72:46: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+   72 |     myType = H5Iregister_type((size_t)64, 0, (H5I_free_t) free );
+      |                                              ^
+../../hdf5/test/tid.c:166:46: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+  166 |     myType = H5Iregister_type((size_t)64, 0, (H5I_free_t) free );
+      |                                              ^
+../../hdf5/test/tid.c: In function ‘id_predefined_test’:
+../../hdf5/test/tid.c:267:46: warning: cast between incompatible function types from ‘int (*)(void *, void *)’ to ‘int (*)(void *, hid_t,  void *)’ {aka ‘int (*)(void *, long int,  void *)’} [-Wcast-function-type]
+  267 |         testPtr = H5Isearch(H5I_GENPROP_LST, (H5I_search_func_t) test_search_func, testObj);
+      |                                              ^
+../../hdf5/test/tid.c: In function ‘test_id_type_list’:
+../../hdf5/test/tid.c:495:48: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+  495 |     startType = H5Iregister_type((size_t)8, 0, (H5I_free_t) free );
+      |                                                ^
+../../hdf5/test/tid.c:510:54: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+  510 |         currentType = H5Iregister_type((size_t)8, 0, (H5I_free_t) free );
+      |                                                      ^
+../../hdf5/test/tid.c:519:54: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+  519 |         currentType = H5Iregister_type((size_t)8, 0, (H5I_free_t) free );
+      |                                                      ^
+../../hdf5/test/tid.c:527:51: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+  527 |         testType = H5Iregister_type((size_t)8, 0, (H5I_free_t) free );
+      |                                                   ^
+../../hdf5/test/tid.c:536:47: warning: cast between incompatible function types from ‘void (*)(void *)’ to ‘herr_t (*)(void *)’ {aka ‘int (*)(void *)’} [-Wcast-function-type]
+  536 |     testType = H5Iregister_type((size_t)8, 0, (H5I_free_t) free );
+      |                                               ^
+  CC       tmisc.o
+  CC       trefer.o
+  CC       trefer_deprec.o
+  CC       trefstr.o
+  CC       tselect.o
+  CC       tskiplist.o
+  CC       tsohm.o
+  CC       ttime.o
+  CC       ttst.o
+  CC       tunicode.o
+  CC       tvlstr.o
+../../hdf5/test/ttst.c: In function ‘test_tst_init’:
+../../hdf5/test/ttst.c:105:18: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  105 |         tmp_word=(char *)words[u];
+      |                  ^
+  CC       tvltypes.o
+../../hdf5/test/tvltypes.c: In function ‘test_vltypes_fill_value’:
+../../hdf5/test/tvltypes.c:2438:40: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2438 |     const dtype1_struct fill1 = {1, 2, "foobar", "", NULL, "\0", "dead", 3, 4.0F, 100.0F, 1.0F, "liquid", "meter"};
+      |                                        ^~~~~~~~
+../../hdf5/test/tvltypes.c:2438:50: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2438 |     const dtype1_struct fill1 = {1, 2, "foobar", "", NULL, "\0", "dead", 3, 4.0F, 100.0F, 1.0F, "liquid", "meter"};
+      |                                                  ^~
+../../hdf5/test/tvltypes.c:2438:60: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2438 |     const dtype1_struct fill1 = {1, 2, "foobar", "", NULL, "\0", "dead", 3, 4.0F, 100.0F, 1.0F, "liquid", "meter"};
+      |                                                            ^~~~
+../../hdf5/test/tvltypes.c:2438:66: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2438 |     const dtype1_struct fill1 = {1, 2, "foobar", "", NULL, "\0", "dead", 3, 4.0F, 100.0F, 1.0F, "liquid", "meter"};
+      |                                                                  ^~~~~~
+../../hdf5/test/tvltypes.c:2438:97: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2438 |     const dtype1_struct fill1 = {1, 2, "foobar", "", NULL, "\0", "dead", 3, 4.0F, 100.0F, 1.0F, "liquid", "meter"};
+      |                                                                                                 ^~~~~~~~
+../../hdf5/test/tvltypes.c:2438:107: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2438 |     const dtype1_struct fill1 = {1, 2, "foobar", "", NULL, "\0", "dead", 3, 4.0F, 100.0F, 1.0F, "liquid", "meter"};
+      |                                                                                                           ^~~~~~~
+../../hdf5/test/tvltypes.c:2439:40: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2439 |     const dtype1_struct wdata = {3, 4, "", NULL, "\0", "foo", "two", 6, 8.0F, 200.0F, 2.0F, "solid", "yard"};
+      |                                        ^~
+../../hdf5/test/tvltypes.c:2439:50: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2439 |     const dtype1_struct wdata = {3, 4, "", NULL, "\0", "foo", "two", 6, 8.0F, 200.0F, 2.0F, "solid", "yard"};
+      |                                                  ^~~~
+../../hdf5/test/tvltypes.c:2439:56: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2439 |     const dtype1_struct wdata = {3, 4, "", NULL, "\0", "foo", "two", 6, 8.0F, 200.0F, 2.0F, "solid", "yard"};
+      |                                                        ^~~~~
+../../hdf5/test/tvltypes.c:2439:63: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2439 |     const dtype1_struct wdata = {3, 4, "", NULL, "\0", "foo", "two", 6, 8.0F, 200.0F, 2.0F, "solid", "yard"};
+      |                                                               ^~~~~
+../../hdf5/test/tvltypes.c:2439:93: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2439 |     const dtype1_struct wdata = {3, 4, "", NULL, "\0", "foo", "two", 6, 8.0F, 200.0F, 2.0F, "solid", "yard"};
+      |                                                                                             ^~~~~~~
+../../hdf5/test/tvltypes.c:2439:102: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 2439 |     const dtype1_struct wdata = {3, 4, "", NULL, "\0", "foo", "two", 6, 8.0F, 200.0F, 2.0F, "solid", "yard"};
+      |                                                                                                      ^~~~~~
+  CC       cache.o
+  CC       cache_api.o
+  CC       cache_image.o
+../../hdf5/test/cache.c: In function ‘check_flush_cache__flush_ops’:
+../../hdf5/test/cache.c:7147:37: warning: size of ‘spec’ 2592 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7147 |     struct fo_flush_cache_test_spec spec[6] =
+      |                                     ^~~~
+../../hdf5/test/cache.c:7413:37: warning: size of ‘spec’ 2592 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7413 |     struct fo_flush_cache_test_spec spec[6] =
+      |                                     ^~~~
+../../hdf5/test/cache.c:8011:37: warning: size of ‘spec’ 4320 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8011 |     struct fo_flush_cache_test_spec spec[10] =
+      |                                     ^~~~
+../../hdf5/test/cache.c:8445:37: warning: size of ‘spec’ 4320 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8445 |     struct fo_flush_cache_test_spec spec[10] =
+      |                                     ^~~~
+../../hdf5/test/cache.c: In function ‘check_flush_cache__flush_op_eviction_test’:
+../../hdf5/test/cache.c:9657:34: warning: size of ‘expected’ 6160 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9657 |     struct expected_entry_status expected[10 + 31 + 14] =
+      |                                  ^~~~~~~~
+../../hdf5/test/cache.c: In function ‘check_flush_cache__single_entry’:
+../../hdf5/test/cache.c:12202:7: warning: size of ‘spec’ 8192 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+12202 |     } spec[256] =
+      |       ^~~~
+  CC       genall5.o
+../../hdf5/test/cache.c: In function ‘check_metadata_blizzard_absence’:
+../../hdf5/test/cache.c:28177:34: warning: size of ‘expected’ 16800 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+28177 |     struct expected_entry_status expected[150] =
+      |                                  ^~~~~~~~
+../../hdf5/test/cache.c: In function ‘check_metadata_cork’:
+../../hdf5/test/cache.c:33762:34: warning: size of ‘expected’ 16800 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+33762 |     struct expected_entry_status expected[150] =
+      |                                  ^~~~~~~~
+../../hdf5/test/cache.c: In function ‘cedds__expunge_dirty_entry_in_flush_test’:
+../../hdf5/test/cache.c:34588:34: warning: size of ‘expected’ 4032 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+34588 |     struct expected_entry_status expected[36] =
+      |                                  ^~~~~~~~
+../../hdf5/test/cache.c: In function ‘cedds__H5C_make_space_in_cache’:
+../../hdf5/test/cache.c:34817:34: warning: size of ‘expected’ 4032 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+34817 |     struct expected_entry_status expected[36] =
+      |                                  ^~~~~~~~
+../../hdf5/test/cache.c: In function ‘cedds__H5C__autoadjust__ageout__evict_aged_out_entries’:
+../../hdf5/test/cache.c:35196:34: warning: size of ‘expected’ 4032 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+35196 |     struct expected_entry_status expected[36] =
+      |                                  ^~~~~~~~
+In function ‘check_flush_cache__single_entry’:
+cc1: warning: size of ‘*.LC0’ 8192 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+In function ‘cedds__H5C_make_space_in_cache’:
+cc1: warning: size of ‘*.LC6’ 4032 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  CC       cache_tagging.o
+  CC       lheap.o
+  CC       ohdr.o
+  CC       stab.o
+  CC       gheap.o
+  CC       evict_on_close.o
+  CC       farray.o
+  CC       earray.o
+  CC       btree2.o
+../../hdf5/test/cache.c: In function ‘check_flush_cache__single_entry’:
+../../hdf5/test/cache.c:10981:1: warning: stack usage might be 8304 bytes [-Wstack-usage=]
+10981 | check_flush_cache__single_entry(H5F_t * file_ptr)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       fheap.o
+  CC       pool.o
+  CC       accum.o
+  CC       hyperslab.o
+  CC       istore.o
+../../hdf5/test/fheap.c: In function ‘test_man_incr_insert_remove’:
+../../hdf5/test/fheap.c:7619:19: warning: size of ‘heap_id’ 6400 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7619 |     unsigned char heap_id[100][MAX_HEAP_ID_LEN]; /* Heap ID for object inserted */
+      |                   ^~~~~~~
+../../hdf5/test/cache.c: In function ‘check_metadata_blizzard_absence’:
+../../hdf5/test/cache.c:28158:1: warning: stack usage is 16896 bytes [-Wstack-usage=]
+28158 | check_metadata_blizzard_absence(hbool_t fill_via_insertion, unsigned paged)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       bittests.o
+../../hdf5/test/cache.c:28987:1: warning: the frame size of 16832 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+28987 | } /* check_metadata_blizzard_absence() */
+      | ^
+  CC       dt_arith.o
+  CC       page_buffer.o
+../../hdf5/test/cache.c: In function ‘check_metadata_cork’:
+../../hdf5/test/cache.c:33742:1: warning: stack usage is 16896 bytes [-Wstack-usage=]
+33742 | check_metadata_cork(hbool_t fill_via_insertion, unsigned paged)
+      | ^~~~~~~~~~~~~~~~~~~
+  CC       dtypes.o
+../../hdf5/test/dt_arith.c: In function ‘my_isnan’:
+../../hdf5/test/dt_arith.c:2728:16: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 2728 |     retval = (x!=x);
+      |                ^~
+../../hdf5/test/dt_arith.c:2732:16: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 2732 |     retval = (x!=x);
+      |                ^~
+../../hdf5/test/dt_arith.c:2737:16: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 2737 |     retval = (x!=x);
+      |                ^~
+../../hdf5/test/cache.c:34453:1: warning: the frame size of 16832 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+34453 | } /* check_metadata_cork() */
+      | ^
+  CC       dsets.o
+  CC       chunk_info.o
+  CC       cmpd_dset.o
+../../hdf5/test/dsets.c:279:9: warning: size of ‘points’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  279 | int     points[DSET_DIM1][DSET_DIM2], check[DSET_DIM1][DSET_DIM2];
+      |         ^~~~~~
+../../hdf5/test/dsets.c:279:39: warning: size of ‘check’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  279 | int     points[DSET_DIM1][DSET_DIM2], check[DSET_DIM1][DSET_DIM2];
+      |                                       ^~~~~
+../../hdf5/test/dsets.c:280:9: warning: size of ‘points_dbl’ 160000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  280 | double  points_dbl[DSET_DIM1][DSET_DIM2], check_dbl[DSET_DIM1][DSET_DIM2];
+      |         ^~~~~~~~~~
+../../hdf5/test/dsets.c:280:43: warning: size of ‘check_dbl’ 160000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  280 | double  points_dbl[DSET_DIM1][DSET_DIM2], check_dbl[DSET_DIM1][DSET_DIM2];
+      |                                           ^~~~~~~~~
+../../hdf5/test/dsets.c: In function ‘test_simple_io’:
+../../hdf5/test/dsets.c:518:17: warning: size of ‘rdata’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  518 |     int         rdata[DSET_DIM1][DSET_DIM2];
+      |                 ^~~~~
+../../hdf5/test/dsets.c: In function ‘test_userblock_offset’:
+../../hdf5/test/dsets.c:651:25: warning: size of ‘rdata’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  651 |     int                 rdata[DSET_DIM1][DSET_DIM2];
+      |                         ^~~~~
+../../hdf5/test/dsets.c: In function ‘test_nbit_float’:
+../../hdf5/test/dsets.c:3080:34: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 3080 |             if(!(orig_data[i][j] == orig_data[i][j]))
+      |                                  ^~
+../../hdf5/test/dsets.c: In function ‘test_nbit_double’:
+../../hdf5/test/dsets.c:3212:34: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 3212 |             if(!(orig_data[i][j] == orig_data[i][j]))
+      |                                  ^~
+../../hdf5/test/dsets.c: In function ‘test_nbit_compound’:
+../../hdf5/test/dsets.c:3547:36: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 3547 |                 (orig_data[i][j].f == orig_data[i][j].f && !H5_FLT_ABS_EQUAL(new_data[i][j].f, orig_data[i][j].f)))
+      |                                    ^~
+../../hdf5/test/dsets.c: In function ‘test_nbit_compound_2’:
+../../hdf5/test/dsets.c:3869:55: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 3869 |                             (new_data[i][j].d[m][n].f == new_data[i][j].d[m][n].f && !H5_FLT_ABS_EQUAL(new_data[i][j].d[m][n].f, new_data[i][j].d[m][n].f))) {
+      |                                                       ^~
+../../hdf5/test/dsets.c:3878:41: warning: comparing floating-point with ‘==’ or ‘!=’ is unsafe [-Wfloat-equal]
+ 3878 |                     (new_data[i][j].a.f == new_data[i][j].a.f && !H5_FLT_ABS_EQUAL(new_data[i][j].a.f, new_data[i][j].a.f)) ||
+      |                                         ^~
+../../hdf5/test/dsets.c: In function ‘test_nbit_int_size’:
+../../hdf5/test/dsets.c:4134:13: warning: size of ‘orig_data’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 4134 |     int     orig_data[DSET_DIM1][DSET_DIM2];
+      |             ^~~~~~~~~
+../../hdf5/test/dsets.c: In function ‘test_nbit_flt_size’:
+../../hdf5/test/dsets.c:4302:13: warning: size of ‘orig_data’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 4302 |     float   orig_data[DSET_DIM1][DSET_DIM2];
+      |             ^~~~~~~~~
+../../hdf5/test/dsets.c: In function ‘test_missing_chunk’:
+../../hdf5/test/dsets.c:6865:17: warning: size of ‘wdata2’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 6865 |     int         wdata2[MISSING_CHUNK_DIM][MISSING_CHUNK_DIM],
+      |                 ^~~~~~
+../../hdf5/test/dsets.c:6866:17: warning: size of ‘rdata2’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 6866 |                 rdata2[MISSING_CHUNK_DIM][MISSING_CHUNK_DIM];
+      |                 ^~~~~~
+../../hdf5/test/dsets.c: In function ‘test_big_chunks_bypass_cache’:
+../../hdf5/test/dsets.c:8085:17: warning: size of ‘t_wdata’ 250000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8085 |     static int  t_wdata[BYPASS_CHUNK_DIM/2][BYPASS_CHUNK_DIM/2], t_rdata1[BYPASS_DIM][BYPASS_DIM],
+      |                 ^~~~~~~
+../../hdf5/test/dsets.c:8085:66: warning: size of ‘t_rdata1’ 4000000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8085 |     static int  t_wdata[BYPASS_CHUNK_DIM/2][BYPASS_CHUNK_DIM/2], t_rdata1[BYPASS_DIM][BYPASS_DIM],
+      |                                                                  ^~~~~~~~
+../../hdf5/test/dsets.c:8086:17: warning: size of ‘t_rdata2’ 250000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8086 |                 t_rdata2[BYPASS_CHUNK_DIM/2][BYPASS_CHUNK_DIM/2];
+      |                 ^~~~~~~~
+../../hdf5/test/dsets.c: In function ‘test_chunk_fast_bug1’:
+../../hdf5/test/dsets.c:8838:21: warning: size of ‘wbuf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8838 |     static unsigned wbuf[40][20], rbuf[40][20];  /* Element written/read */
+      |                     ^~~~
+../../hdf5/test/dsets.c:8838:35: warning: size of ‘rbuf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8838 |     static unsigned wbuf[40][20], rbuf[40][20];  /* Element written/read */
+      |                                   ^~~~
+../../hdf5/test/dsets.c: In function ‘test_fixed_array’:
+../../hdf5/test/dsets.c:9440:17: warning: size of ‘chunks_big’ 10000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9440 |     int         chunks_big[125][20];    /* # of chunks for big dataset dimensions */
+      |                 ^~~~~~~~~~
+../../hdf5/test/dsets.c:9445:17: warning: size of ‘coord_big’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9445 |     hsize_t     coord_big[POINTS_BIG][2];       /* big dataset coordinates */
+      |                 ^~~~~~~~~
+  CC       filter_fail.o
+  CC       extend.o
+  CC       direct_chunk.o
+../../hdf5/test/dsets.c: In function ‘test_simple_io’:
+../../hdf5/test/dsets.c:509:1: warning: stack usage might be 81152 bytes [-Wstack-usage=]
+  509 | test_simple_io(const char *env_h5_drvr, hid_t fapl)
+      | ^~~~~~~~~~~~~~
+../../hdf5/test/extend.c:32:33: warning: size of ‘buf1’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   32 | static int                      buf1[NY][NX], buf2[NX / 2][NY / 2];
+      |                                 ^~~~
+../../hdf5/test/extend.c:32:47: warning: size of ‘buf2’ 10000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   32 | static int                      buf1[NY][NX], buf2[NX / 2][NY / 2];
+      |                                               ^~~~
+../../hdf5/test/dsets.c:630:1: warning: the frame size of 81072 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  630 | } /* end test_simple_io() */
+      | ^
+  CC       external.o
+  CC       efc.o
+  CC       objcopy.o
+  CC       objcopy_ref.o
+  CC       links.o
+../../hdf5/test/external.c: In function ‘test_path_absolute’:
+../../hdf5/test/external.c:949:53: warning: ‘extern_’ directive output may be truncated writing 7 bytes into a region of size between 0 and 1023 [-Wformat-truncation=]
+  949 |         HDsnprintf(filename, sizeof(filename), "%s%sextern_%dr.raw", cwdpath, H5_DIR_SEPS, (int) i + 1);
+      |                                                     ^~~~~~~
+../../hdf5/test/external.c:949:48: note: directive argument in the range [1, 4]
+  949 |         HDsnprintf(filename, sizeof(filename), "%s%sextern_%dr.raw", cwdpath, H5_DIR_SEPS, (int) i + 1);
+      |                                                ^~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/stdio.h:894,
+                 from ../../hdf5/src/H5Epublic.h:20,
+                 from ../../hdf5/src/hdf5.h:26,
+                 from ../../hdf5/test/h5test.h:27,
+                 from ../../hdf5/test/external_common.h:24,
+                 from ../../hdf5/test/external.c:20:
+In function ‘snprintf’,
+    inlined from ‘test_path_absolute’ at ../../hdf5/test/external.c:949:9:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:71:10: note: ‘__builtin___snprintf_chk’ output between 15 and 1038 bytes into a destination of size 1024
+   71 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   72 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+../../hdf5/test/objcopy_ref.c: In function ‘compare_data’:
+../../hdf5/test/objcopy_ref.c:819:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  819 |             ref_buf1 = (H5R_ref_t *)buf1;
+      |                        ^
+../../hdf5/test/objcopy_ref.c:820:24: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  820 |             ref_buf2 = (H5R_ref_t *)buf2;
+      |                        ^
+  CC       unlink.o
+../../hdf5/test/dsets.c: In function ‘test_nbit_int_size’:
+../../hdf5/test/dsets.c:4129:1: warning: stack usage might be 80144 bytes [-Wstack-usage=]
+ 4129 | test_nbit_int_size(hid_t file)
+      | ^~~~~~~~~~~~~~~~~~
+../../hdf5/test/dsets.c:4278:1: warning: the frame size of 80064 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 4278 | } /* end test_nbit_int_size() */
+      | ^
+../../hdf5/test/dsets.c: In function ‘test_nbit_flt_size’:
+../../hdf5/test/dsets.c:4297:1: warning: stack usage might be 80144 bytes [-Wstack-usage=]
+ 4297 | test_nbit_flt_size(hid_t file)
+      | ^~~~~~~~~~~~~~~~~~
+../../hdf5/test/dsets.c:4475:1: warning: the frame size of 80064 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 4475 | } /* end test_nbit_flt_size() */
+      | ^
+  CC       twriteorder.o
+../../hdf5/test/dsets.c: In function ‘test_userblock_offset’:
+../../hdf5/test/dsets.c:643:1: warning: stack usage might be 81136 bytes [-Wstack-usage=]
+  643 | test_userblock_offset(const char *env_h5_drvr, hid_t fapl, hbool_t new_format)
+      | ^~~~~~~~~~~~~~~~~~~~~
+../../hdf5/test/dsets.c:736:1: warning: the frame size of 81056 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  736 | } /* end test_userblock_offset() */
+      | ^
+  CC       big.o
+../../hdf5/test/dsets.c: In function ‘test_missing_chunk’:
+../../hdf5/test/dsets.c:6854:1: warning: stack usage might be 81136 bytes [-Wstack-usage=]
+ 6854 | test_missing_chunk(hid_t file)
+      | ^~~~~~~~~~~~~~~~~~
+../../hdf5/test/dsets.c:7027:1: warning: the frame size of 81040 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 7027 | } /* end test_missing_chunk() */
+      | ^
+  CC       mtime.o
+  CC       fillval.o
+../../hdf5/test/fillval.c: In function ‘test_extend_cases’:
+../../hdf5/test/fillval.c:1456:40: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1456 |     comp_vl_datatype init_val_c = {87, "baz", "mumble", 129};
+      |                                        ^~~~~
+../../hdf5/test/fillval.c:1456:47: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1456 |     comp_vl_datatype init_val_c = {87, "baz", "mumble", 129};
+      |                                               ^~~~~~~~
+../../hdf5/test/fillval.c: In function ‘test_extend’:
+../../hdf5/test/fillval.c:1859:39: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1859 |     comp_vl_datatype fillval_c = {32, "foo", "bar", 64};         /* Fill value for compound+vl datatype tests */
+      |                                       ^~~~~
+../../hdf5/test/fillval.c:1859:46: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1859 |     comp_vl_datatype fillval_c = {32, "foo", "bar", 64};         /* Fill value for compound+vl datatype tests */
+      |                                              ^~~~~
+  CC       mount.o
+  CC       flush1.o
+../../hdf5/test/dsets.c: In function ‘test_fixed_array’:
+../../hdf5/test/dsets.c:9409:1: warning: stack usage might be 53392 bytes [-Wstack-usage=]
+ 9409 | test_fixed_array(hid_t fapl)
+      | ^~~~~~~~~~~~~~~~
+../../hdf5/test/dsets.c:9805:1: warning: the frame size of 53312 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 9805 | } /* end test_fixed_array() */
+      | ^
+  CC       flush2.o
+  CC       app_ref.o
+  CC       enum.o
+  CC       set_extent.o
+  CC       ttsafe.o
+../../hdf5/test/set_extent.c: In function ‘test_random_rank4’:
+../../hdf5/test/set_extent.c:2274:17: warning: size of ‘rbuf’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2274 |     static int  rbuf[10][10][10][10];           /* Read buffer */
+      |                 ^~~~
+../../hdf5/test/set_extent.c:2275:17: warning: size of ‘wbuf’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2275 |     static int  wbuf[10][10][10][10];           /* Write buffer */
+      |                 ^~~~
+../../hdf5/test/set_extent.c:2276:20: warning: size of ‘dim_log’ 3232 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2276 |     static hsize_t dim_log[RAND4_NITER+1][4];   /* Log of dataset dimensions */
+      |                    ^~~~~~~
+../../hdf5/test/set_extent.c: In function ‘test_random_rank4_vl’:
+../../hdf5/test/set_extent.c:2477:18: warning: size of ‘rbuf’ 160000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2477 |     static hvl_t rbuf[10][10][10][10];          /* Read buffer */
+      |                  ^~~~
+../../hdf5/test/set_extent.c:2478:18: warning: size of ‘wbuf’ 160000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2478 |     static hvl_t wbuf[10][10][10][10];          /* Write buffer */
+      |                  ^~~~
+../../hdf5/test/set_extent.c:2479:20: warning: size of ‘dim_log’ 3232 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2479 |     static hsize_t dim_log[RAND4_NITER+1][4];   /* Log of dataset dimensions */
+      |                    ^~~~~~~
+  CC       ttsafe_dcreate.o
+  CC       ttsafe_error.o
+  CC       ttsafe_cancel.o
+  CC       ttsafe_acreate.o
+  CC       enc_dec_plist.o
+  CC       enc_dec_plist_cross_platform.o
+  CC       getname.o
+  CC       vfd.o
+../../hdf5/test/vfd.c: In function ‘test_family’:
+../../hdf5/test/vfd.c:866:17: warning: size of ‘buf’ 16384 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  866 |     int         buf[FAMILY_NUMBER][FAMILY_SIZE];
+      |                 ^~~
+../../hdf5/test/vfd.c: In function ‘test_family_member_fapl’:
+../../hdf5/test/vfd.c:1160:14: warning: size of ‘buf’ 16384 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 1160 |     int      buf[FAMILY_NUMBER][FAMILY_SIZE];
+      |              ^~~
+../../hdf5/test/vfd.c: In function ‘test_multi’:
+../../hdf5/test/vfd.c:1340:17: warning: size of ‘buf’ 65536 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 1340 |     int         buf[MULTI_SIZE][MULTI_SIZE];
+      |                 ^~~
+../../hdf5/test/vfd.c: In function ‘test_multi_compat’:
+../../hdf5/test/vfd.c:1575:17: warning: size of ‘buf’ 65536 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 1575 |     int         buf[MULTI_SIZE][MULTI_SIZE];
+      |                 ^~~
+  CC       ros3.o
+  CC       s3comms.o
+../../hdf5/test/vfd.c: In function ‘test_family_member_fapl’:
+../../hdf5/test/vfd.c:1149:1: warning: stack usage might be 17568 bytes [-Wstack-usage=]
+ 1149 | test_family_member_fapl(void)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+../../hdf5/test/vfd.c:1264:1: warning: the frame size of 17488 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 1264 | } /* end test_family_member_fapl() */
+      | ^
+  CC       hdfs.o
+  CC       ntypes.o
+../../hdf5/test/vfd.c: In function ‘test_family’:
+../../hdf5/test/vfd.c:856:1: warning: stack usage might be 17600 bytes [-Wstack-usage=]
+  856 | test_family(void)
+      | ^~~~~~~~~~~
+../../hdf5/test/vfd.c:1021:1: warning: the frame size of 17520 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 1021 | }
+      | ^
+../../hdf5/test/vfd.c: In function ‘test_multi_compat’:
+../../hdf5/test/vfd.c:1562:1: warning: stack usage might be 71264 bytes [-Wstack-usage=]
+ 1562 | test_multi_compat(void)
+      | ^~~~~~~~~~~~~~~~~
+../../hdf5/test/vfd.c:1712:1: warning: the frame size of 71184 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 1712 | }
+      | ^
+  CC       dangle.o
+../../hdf5/test/vfd.c: In function ‘test_multi’:
+../../hdf5/test/vfd.c:1320:1: warning: stack usage might be 67280 bytes [-Wstack-usage=]
+ 1320 | test_multi(void)
+      | ^~~~~~~~~~
+../../hdf5/test/vfd.c:1538:1: warning: the frame size of 67200 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 1538 | } /* end test_multi() */
+      | ^
+../../hdf5/test/ntypes.c:33:9: warning: size of ‘ipoints2’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   33 | int     ipoints2[DIM0][DIM1], icheck2[DIM0][DIM1];
+      |         ^~~~~~~~
+../../hdf5/test/ntypes.c:33:31: warning: size of ‘icheck2’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   33 | int     ipoints2[DIM0][DIM1], icheck2[DIM0][DIM1];
+      |                               ^~~~~~~
+../../hdf5/test/ntypes.c:34:9: warning: size of ‘spoints2’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   34 | short   spoints2[DIM0][DIM1], scheck2[DIM0][DIM1];
+      |         ^~~~~~~~
+../../hdf5/test/ntypes.c:34:31: warning: size of ‘scheck2’ 40000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   34 | short   spoints2[DIM0][DIM1], scheck2[DIM0][DIM1];
+      |                               ^~~~~~~
+../../hdf5/test/ntypes.c:35:9: warning: size of ‘ipoints3’ 400000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   35 | int     ipoints3[DIM0][DIM1][5], icheck3[DIM0][DIM1][5];
+      |         ^~~~~~~~
+../../hdf5/test/ntypes.c:35:34: warning: size of ‘icheck3’ 400000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   35 | int     ipoints3[DIM0][DIM1][5], icheck3[DIM0][DIM1][5];
+      |                                  ^~~~~~~
+  CC       dtransform.o
+  CC       reserved.o
+../../hdf5/test/dtransform.c: In function ‘main’:
+../../hdf5/test/dtransform.c:117:10: warning: size of ‘array’ 3456 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  117 |     TYPE array[ROWS][COLS];                            \
+      |          ^~~~~
+../../hdf5/test/dtransform.c:303:5: note: in expansion of macro ‘TEST_TYPE_CONTIG’
+  303 |     TEST_TYPE_CONTIG(dxpl_id_c_to_f, long double, H5T_NATIVE_LDOUBLE, "ldouble", windchillFfloat, 1);
+      |     ^~~~~~~~~~~~~~~~
+../../hdf5/test/dtransform.c:183:10: warning: size of ‘array’ 3456 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  183 |     TYPE array[ROWS][COLS];                            \
+      |          ^~~~~
+../../hdf5/test/dtransform.c:320:5: note: in expansion of macro ‘TEST_TYPE_CHUNK’
+  320 |     TEST_TYPE_CHUNK(dxpl_id_c_to_f, long double, H5T_NATIVE_LDOUBLE, "ldouble", windchillFfloat, 1);
+      |     ^~~~~~~~~~~~~~~
+  CC       cross_read.o
+  CC       freespace.o
+  CC       mf.o
+  CC       vds.o
+  CC       file_image.o
+  CC       unregister.o
+  CC       cache_logging.o
+  CC       cork.o
+../../hdf5/test/unregister.c: In function ‘test_unregister_filters’:
+../../hdf5/test/unregister.c:98:17: warning: size of ‘data’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   98 |     int         data[DSET_DIM1][DSET_DIM2];
+      |                 ^~~~
+../../hdf5/test/unregister.c:83:1: warning: stack usage might be 81264 bytes [-Wstack-usage=]
+   83 | test_unregister_filters(hid_t fapl_id)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+../../hdf5/test/unregister.c:251:1: warning: the frame size of 81184 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  251 | }
+      | ^
+  CC       swmr.o
+  CC       vol.o
+  CC       error_test.o
+../../hdf5/test/swmr.c: In function ‘test_start_swmr_write_concur’:
+../../hdf5/test/swmr.c:2570:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 2570 |     if(HDwrite(in_pdf[1], &child_notify, sizeof(int)) < 0)
+      |     ^~
+../../hdf5/test/swmr.c:2574:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 2574 |         while(child_notify != 3) {
+      |         ^~~~~
+../../hdf5/test/swmr.c:2612:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 2612 |     if(HDclose(in_pdf[1]) < 0)
+      |     ^~
+In file included from ../../hdf5/test/h5test.h:28,
+                 from ../../hdf5/test/swmr.c:27:
+../../hdf5/src/H5private.h:781:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  781 |     #define HDexit(N)    exit(N)
+      |                          ^~~~
+../../hdf5/test/swmr.c:2615:9: note: in expansion of macro ‘HDexit’
+ 2615 |         HDexit(EXIT_SUCCESS);
+      |         ^~~~~~
+../../hdf5/test/swmr.c:2816:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 2816 |     if(HDclose(out_pdf[0]) < 0)
+      |     ^~
+../../hdf5/src/H5private.h:781:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  781 |     #define HDexit(N)    exit(N)
+      |                          ^~~~
+../../hdf5/test/swmr.c:2819:9: note: in expansion of macro ‘HDexit’
+ 2819 |         HDexit(EXIT_SUCCESS);
+      |         ^~~~~~
+../../hdf5/test/error_test.c:41:8: warning: size of ‘ipoints2’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   41 | int    ipoints2[DIM0][DIM1], icheck2[DIM0][DIM1];
+      |        ^~~~~~~~
+../../hdf5/test/error_test.c:41:30: warning: size of ‘icheck2’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   41 | int    ipoints2[DIM0][DIM1], icheck2[DIM0][DIM1];
+      |                              ^~~~~~~
+  CC       err_compat.o
+  CC       tcheck_version.o
+  CC       testmeta.o
+../../hdf5/test/err_compat.c:38:8: warning: size of ‘ipoints2’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   38 | int    ipoints2[DIM0][DIM1], icheck2[DIM0][DIM1];
+      |        ^~~~~~~~
+../../hdf5/test/err_compat.c:38:30: warning: size of ‘icheck2’ 80000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   38 | int    ipoints2[DIM0][DIM1], icheck2[DIM0][DIM1];
+      |                              ^~~~~~~
+  CC       accum_swmr_reader.o
+  CC       atomic_writer.o
+  CC       atomic_reader.o
+  CC       external_env.o
+  CC       links_env.o
+  CC       filenotclosed.o
+  CC       del_many_dense_attrs.o
+../../hdf5/test/vds.c: In function ‘test_basic_io’:
+../../hdf5/test/vds.c:1387:1: warning: stack usage might be 11216 bytes [-Wstack-usage=]
+ 1387 | test_basic_io(unsigned config, hid_t fapl)
+      | ^~~~~~~~~~~~~
+  CC       flushrefresh.o
+  CC       use_append_chunk.o
+  CC       use_common.o
+../../hdf5/test/del_many_dense_attrs.c: In function ‘main’:
+../../hdf5/test/del_many_dense_attrs.c:73:20: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   73 |     char *basename="attr";      /* Name prefix for attribute    */
+      |                    ^~~~~~
+  CC       use_append_mchunks.o
+  CC       use_disable_mdc_flushes.o
+  CC       swmr_generator.o
+  CC       swmr_start_write.o
+  CC       swmr_reader.o
+  CC       swmr_writer.o
+../../hdf5/test/vds.c: In function ‘test_vds_prefix_first’:
+../../hdf5/test/vds.c:1135:1: warning: stack usage might be 8592 bytes [-Wstack-usage=]
+ 1135 | test_vds_prefix_first(unsigned config, hid_t fapl)
+      | ^~~~~~~~~~~~~~~~~~~~~
+  CC       swmr_remove_reader.o
+  CC       swmr_remove_writer.o
+  CC       swmr_addrem_writer.o
+  CC       swmr_sparse_reader.o
+  CC       swmr_sparse_writer.o
+  CC       swmr_check_compat_vfd.o
+  CC       vds_env.o
+  CC       vds_swmr_gen.o
+  CC       vds_swmr_reader.o
+  CC       vds_swmr_writer.o
+  CC       filter_plugin.o
+  CC       vol_plugin.o
+../../hdf5/test/vds_env.c: In function ‘test_vds_prefix_second’:
+../../hdf5/test/vds_env.c:51:1: warning: stack usage might be 9616 bytes [-Wstack-usage=]
+   51 | test_vds_prefix_second(unsigned config, hid_t fapl)
+      | ^~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libh5test.la
+In file included from ../../hdf5/test/filter_plugin.c:17:
+../../hdf5/test/H5srcdir.h:52:20: warning: ‘H5_get_srcdir_filename’ defined but not used [-Wunused-function]
+   52 | static const char *H5_get_srcdir_filename(const char *filename)
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+  CCLD     libfilter_plugin1_dsets.la
+  CCLD     libfilter_plugin2_dsets.la
+  CCLD     libfilter_plugin3_dsets.la
+  CCLD     libfilter_plugin4_groups.la
+  CCLD     libnull_vol_connector.la
+  CCLD     gen_bad_ohdr
+  CCLD     gen_bogus
+  CCLD     gen_cross
+  CCLD     gen_deflate
+  CCLD     gen_filters
+  CCLD     gen_new_array
+  CCLD     gen_new_fill
+  CCLD     gen_new_group
+  CCLD     gen_new_mtime
+  CCLD     gen_new_super
+  CCLD     gen_noencoder
+  CCLD     gen_nullspace
+  CCLD     gen_udlinks
+  CCLD     space_overflow
+  CCLD     gen_filespace
+  CCLD     gen_specmetaread
+  CCLD     gen_sizes_lheap
+  CCLD     gen_file_image
+  CCLD     gen_plist
+  CCLD     gen_bad_offset
+../../hdf5/test/vds.c: In function ‘test_printf’:
+../../hdf5/test/vds.c:7287:1: warning: stack usage might be 11072 bytes [-Wstack-usage=]
+ 7287 | test_printf(unsigned config, hid_t fapl)
+      | ^~~~~~~~~~~
+  CCLD     gen_bounds
+  CCLD     testhdf5
+  CCLD     cache
+  CCLD     cache_api
+  CCLD     cache_image
+  CCLD     cache_tagging
+  CCLD     lheap
+  CCLD     ohdr
+  CCLD     stab
+  CCLD     gheap
+  CCLD     evict_on_close
+  CCLD     farray
+  CCLD     earray
+  CCLD     btree2
+  CCLD     fheap
+  CCLD     pool
+  CCLD     accum
+  CCLD     hyperslab
+  CCLD     istore
+  CCLD     bittests
+  CCLD     dt_arith
+  CCLD     page_buffer
+  CCLD     dtypes
+  CCLD     dsets
+  CCLD     chunk_info
+  CCLD     cmpd_dset
+  CCLD     filter_fail
+  CCLD     extend
+  CCLD     direct_chunk
+  CCLD     external
+  CCLD     efc
+  CCLD     objcopy
+  CCLD     objcopy_ref
+  CCLD     links
+  CCLD     unlink
+  CCLD     twriteorder
+  CCLD     big
+  CCLD     mtime
+  CCLD     fillval
+  CCLD     mount
+  CCLD     flush1
+  CCLD     flush2
+  CCLD     app_ref
+  CCLD     enum
+  CCLD     set_extent
+  CCLD     ttsafe
+  CCLD     enc_dec_plist
+  CCLD     enc_dec_plist_cross_platform
+  CCLD     getname
+  CCLD     vfd
+  CCLD     ros3
+  CCLD     s3comms
+  CCLD     hdfs
+  CCLD     ntypes
+  CCLD     dangle
+  CCLD     dtransform
+  CCLD     reserved
+  CCLD     cross_read
+  CCLD     freespace
+  CCLD     mf
+  CCLD     vds
+  CCLD     file_image
+  CCLD     unregister
+  CCLD     cache_logging
+  CCLD     cork
+  CCLD     swmr
+  CCLD     vol
+  CCLD     error_test
+  CCLD     err_compat
+  CCLD     tcheck_version
+  CCLD     testmeta
+  CCLD     accum_swmr_reader
+  CCLD     atomic_writer
+  CCLD     atomic_reader
+  CCLD     external_env
+  CCLD     links_env
+  CCLD     filenotclosed
+  CCLD     del_many_dense_attrs
+  CCLD     flushrefresh
+  CCLD     use_append_chunk
+  CCLD     use_append_mchunks
+  CCLD     use_disable_mdc_flushes
+  CCLD     swmr_generator
+  CCLD     swmr_start_write
+  CCLD     swmr_reader
+  CCLD     swmr_writer
+  CCLD     swmr_remove_reader
+  CCLD     swmr_remove_writer
+  CCLD     swmr_addrem_writer
+  CCLD     swmr_sparse_reader
+  CCLD     swmr_sparse_writer
+  CCLD     swmr_check_compat_vfd
+  CCLD     vds_env
+  CCLD     vds_swmr_gen
+  CCLD     vds_swmr_reader
+  CCLD     vds_swmr_writer
+  CCLD     filter_plugin
+  CCLD     vol_plugin
+make[1]: Leaving directory '/home/derobins/hdf5_devel/develop/build/test'
+Making all in bin
+make[1]: Entering directory '/home/derobins/hdf5_devel/develop/build/bin'
+make[1]: Leaving directory '/home/derobins/hdf5_devel/develop/build/bin'
+Making all in tools
+make[1]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools'
+Making all in lib
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/lib'
+  CC       h5tools.lo
+  CC       h5tools_dump.lo
+  CC       h5tools_str.lo
+  CC       h5diff.lo
+  CC       h5tools_utils.lo
+  CC       h5diff_array.lo
+  CC       h5diff_attr.lo
+../../../hdf5/tools/lib/h5tools.c: In function ‘render_bin_output’:
+../../../hdf5/tools/lib/h5tools.c:1439:60: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1439 |                             if((region_id = H5Ropen_object((const H5R_ref_t *)mem, H5P_DEFAULT, H5P_DEFAULT)) < 0)
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../hdf5/src/hdf5.h:37,
+                 from ../../../hdf5/tools/lib/h5tools.h:23,
+                 from ../../../hdf5/tools/lib/h5tools.c:19:
+../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools.c:1442:67: warning: passing argument 1 of ‘H5Ropen_region’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1442 |                                 if((region_space = H5Ropen_region((const H5R_ref_t *)mem, H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:115:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  115 | H5_DLL hid_t    H5Ropen_region(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5diff_array.c: In function ‘character_compare_opt’:
+../../../hdf5/tools/lib/h5diff_array.c:2542:19: warning: variable ‘both_zero’ set but not used [-Wunused-but-set-variable]
+ 2542 |     hbool_t       both_zero;
+      |                   ^~~~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c: In function ‘h5tools_dump_data’:
+../../../hdf5/tools/lib/h5tools_dump.c:4094:46: warning: passing argument 1 of ‘H5Rget_obj_type3’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4094 |                         if (H5Rget_obj_type3((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, &obj_type) >= 0) {
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../hdf5/src/hdf5.h:37,
+                 from ../../../hdf5/tools/lib/h5tools.h:23,
+                 from ../../../hdf5/tools/lib/h5tools_dump.c:19:
+../../../hdf5/src/H5Rpublic.h:119:45: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  119 | H5_DLL herr_t   H5Rget_obj_type3(H5R_ref_t *ref_ptr, hid_t rapl_id, H5O_type_t *obj_type);
+      |                                  ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4097:69: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4097 |                                     if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4122:57: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4122 |                         if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4134:46: warning: passing argument 1 of ‘H5Rget_obj_type3’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4134 |                         if (H5Rget_obj_type3((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, &obj_type) >= 0) {
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:119:45: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  119 | H5_DLL herr_t   H5Rget_obj_type3(H5R_ref_t *ref_ptr, hid_t rapl_id, H5O_type_t *obj_type);
+      |                                  ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4140:69: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4140 |                                     if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4171:57: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4171 |                         if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) < 0)
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4174:62: warning: passing argument 1 of ‘H5Ropen_region’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4174 |                             if((new_obj_sid = H5Ropen_region((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:115:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  115 | H5_DLL hid_t    H5Ropen_region(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_dump.c:4226:55: warning: passing argument 1 of ‘H5Ropen_attr’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 4226 |                         if((new_obj_id = H5Ropen_attr((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../hdf5/src/H5Rpublic.h:116:41: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  116 | H5_DLL hid_t    H5Ropen_attr(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t aapl_id);
+      |                              ~~~~~~~~~~~^~~~~~~
+../../../hdf5/tools/lib/h5tools_utils.c: In function ‘h5tools_set_configured_fapl’:
+../../../hdf5/tools/lib/h5tools_utils.c:1293:40: warning: unused parameter ‘fapl_t_ptr’ [-Wunused-parameter]
+ 1293 |                            void       *fapl_t_ptr)
+      |                            ~~~~~~~~~~~~^~~~~~~~~~
+  CC       h5diff_dset.lo
+  CC       h5diff_util.lo
+  CC       h5trav.lo
+  CC       h5tools_filters.lo
+  CC       h5tools_ref.lo
+  CC       h5tools_type.lo
+  CC       io_timer.lo
+  CCLD     libh5tools.la
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/lib'
+Making all in src
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src'
+Making all in h5diff
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5diff'
+  CC       h5diff_main.o
+  CC       h5diff_common.o
+../../../../hdf5/tools/src/h5diff/h5diff_common.c: In function ‘parse_command_line’:
+../../../../hdf5/tools/src/h5diff/h5diff_common.c:194:38: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+  194 |             exclude_node->obj_path = (char*)opt_arg;
+      |                                      ^
+  CCLD     h5diff
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5diff'
+Making all in h5ls
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5ls'
+  CC       h5ls.o
+../../../../hdf5/tools/src/h5ls/h5ls.c: In function ‘dump_reference’:
+../../../../hdf5/tools/src/h5ls/h5ls.c:1336:38: warning: passing argument 1 of ‘H5Rget_obj_type3’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1336 |                 if (H5Rget_obj_type3((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, &obj_type) >= 0) {
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../../../hdf5/src/hdf5.h:37,
+                 from ../../../../hdf5/tools/lib/h5tools.h:23,
+                 from ../../../../hdf5/tools/src/h5ls/h5ls.c:26:
+../../../../hdf5/src/H5Rpublic.h:119:45: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  119 | H5_DLL herr_t   H5Rget_obj_type3(H5R_ref_t *ref_ptr, hid_t rapl_id, H5O_type_t *obj_type);
+      |                                  ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1339:61: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1339 |                             if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1366:49: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1366 |                 if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1380:38: warning: passing argument 1 of ‘H5Rget_obj_type3’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1380 |                 if (H5Rget_obj_type3((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, &obj_type) >= 0) {
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:119:45: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  119 | H5_DLL herr_t   H5Rget_obj_type3(H5R_ref_t *ref_ptr, hid_t rapl_id, H5O_type_t *obj_type);
+      |                                  ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1386:61: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1386 |                             if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1419:49: warning: passing argument 1 of ‘H5Ropen_object’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1419 |                 if((new_obj_id = H5Ropen_object((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) < 0)
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:114:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  114 | H5_DLL hid_t    H5Ropen_object(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1422:54: warning: passing argument 1 of ‘H5Ropen_region’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1422 |                     if((new_obj_sid = H5Ropen_region((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:115:43: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  115 | H5_DLL hid_t    H5Ropen_region(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t oapl_id);
+      |                                ~~~~~~~~~~~^~~~~~~
+../../../../hdf5/tools/src/h5ls/h5ls.c:1474:47: warning: passing argument 1 of ‘H5Ropen_attr’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1474 |                 if((new_obj_id = H5Ropen_attr((const H5R_ref_t *)&ref_buf[i], H5P_DEFAULT, H5P_DEFAULT)) >= 0) {
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/src/H5Rpublic.h:116:41: note: expected ‘H5R_ref_t *’ but argument is of type ‘const H5R_ref_t *’
+  116 | H5_DLL hid_t    H5Ropen_attr(H5R_ref_t *ref_ptr, hid_t rapl_id, hid_t aapl_id);
+      |                              ~~~~~~~~~~~^~~~~~~
+  CCLD     h5ls
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5ls'
+Making all in h5dump
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5dump'
+  CC       h5dump.o
+  CC       h5dump_ddl.o
+  CC       h5dump_xml.o
+In file included from ../../../../hdf5/tools/src/h5dump/h5dump_xml.c:14:
+../../../../hdf5/tools/src/h5dump/h5dump_xml.c: In function ‘xml_escape_the_string’:
+../../../../hdf5/src/H5private.h:1393:31: warning: ‘__builtin_strncpy’ output truncated before terminating nul copying 6 bytes from a string of the same length [-Wstringop-truncation]
+ 1393 |     #define HDstrncpy(X,Y,Z)  strncpy(X,Y,Z)
+      |                               ^~~~~~~
+../../../../hdf5/tools/src/h5dump/h5dump_xml.c:796:13: note: in expansion of macro ‘HDstrncpy’
+  796 |             HDstrncpy(ncp, apos, esc_len);
+      |             ^~~~~~~~~
+../../../../hdf5/src/H5private.h:1393:31: warning: ‘__builtin_strncpy’ output truncated before terminating nul copying 4 bytes from a string of the same length [-Wstringop-truncation]
+ 1393 |     #define HDstrncpy(X,Y,Z)  strncpy(X,Y,Z)
+      |                               ^~~~~~~
+../../../../hdf5/tools/src/h5dump/h5dump_xml.c:800:13: note: in expansion of macro ‘HDstrncpy’
+  800 |             HDstrncpy(ncp, lt, esc_len);
+      |             ^~~~~~~~~
+../../../../hdf5/src/H5private.h:1393:31: warning: ‘__builtin_strncpy’ output truncated before terminating nul copying 4 bytes from a string of the same length [-Wstringop-truncation]
+ 1393 |     #define HDstrncpy(X,Y,Z)  strncpy(X,Y,Z)
+      |                               ^~~~~~~
+../../../../hdf5/tools/src/h5dump/h5dump_xml.c:804:13: note: in expansion of macro ‘HDstrncpy’
+  804 |             HDstrncpy(ncp, gt, esc_len);
+      |             ^~~~~~~~~
+../../../../hdf5/src/H5private.h:1393:31: warning: ‘__builtin_strncpy’ output truncated before terminating nul copying 5 bytes from a string of the same length [-Wstringop-truncation]
+ 1393 |     #define HDstrncpy(X,Y,Z)  strncpy(X,Y,Z)
+      |                               ^~~~~~~
+../../../../hdf5/tools/src/h5dump/h5dump_xml.c:808:13: note: in expansion of macro ‘HDstrncpy’
+  808 |             HDstrncpy(ncp, amp, esc_len);
+      |             ^~~~~~~~~
+  CCLD     h5dump
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5dump'
+Making all in misc
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/misc'
+  CC       h5debug.o
+  CC       h5repart.o
+  CC       h5mkgrp.o
+  CC       h5clear.o
+  CCLD     h5mkgrp
+  CCLD     h5clear
+  CCLD     h5repart
+  CCLD     h5debug
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/misc'
+Making all in h5import
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5import'
+  CC       h5import.o
+../../../../hdf5/tools/src/h5import/h5import.c: In function ‘main’:
+../../../../hdf5/tools/src/h5import/h5import.c:75:21: warning: size of ‘opt’ 173544 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   75 |     struct Options  opt;
+      |                     ^~~
+../../../../hdf5/tools/src/h5import/h5import.c:73:5: warning: stack usage is 173632 bytes [-Wstack-usage=]
+   73 | int main(int argc, char *argv[])
+      |     ^~~~
+../../../../hdf5/tools/src/h5import/h5import.c:269:1: warning: the frame size of 173568 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  269 | }
+      | ^
+  CCLD     h5import
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5import'
+Making all in h5repack
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5repack'
+  CC       h5repack.lo
+  CC       h5repack_copy.lo
+  CC       h5repack_filters.lo
+  CC       h5repack_opttable.lo
+  CC       h5repack_refs.lo
+  CC       h5repack_parse.lo
+  CC       h5repack_verify.lo
+  CC       h5repack_main.o
+  CCLD     libh5repack.la
+  CCLD     h5repack
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5repack'
+Making all in h5jam
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5jam'
+  CC       h5jam.o
+  CC       h5unjam.o
+  CCLD     h5unjam
+  CCLD     h5jam
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5jam'
+Making all in h5copy
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5copy'
+  CC       h5copy.o
+  CCLD     h5copy
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5copy'
+Making all in h5format_convert
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5format_convert'
+  CC       h5format_convert.o
+  CCLD     h5format_convert
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5format_convert'
+Making all in h5stat
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5stat'
+  CC       h5stat.o
+  CCLD     h5stat
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src/h5stat'
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/src'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src'
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/src'
+Making all in test
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test'
+Making all in h5diff
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5diff'
+  CC       dynlib_diff.lo
+  CC       h5diffgentest.o
+  CCLD     libdynlibdiff.la
+  CCLD     h5diffgentest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5diff'
+Making all in h5ls
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5ls'
+  CC       dynlib_ls.lo
+  CCLD     libdynlibls.la
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5ls'
+Making all in h5dump
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5dump'
+  CC       dynlib_dump.lo
+  CC       h5dumpgentest.o
+  CC       binread.o
+  CCLD     binread
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_dataset’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:467:12: warning: size of ‘dset2’ 4800 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  467 |     double dset2[30][20];
+      |            ^~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_str’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:1776:16: warning: size of ‘comp1’ 12888 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 1776 |     compound_t comp1[3][6];
+      |                ^~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_array8’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:3516:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 3516 |         if(dset>=0)
+      |         ^~
+In file included from ../../../../hdf5/src/H5private.h:48,
+                 from ../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:25:
+../../../../hdf5/src/H5private.h:669:28: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  669 |     #define HDassert(X)    assert(X)
+      |                            ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:3518:13: note: in expansion of macro ‘HDassert’
+ 3518 |             HDassert(status >= 0);
+      |             ^~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_multi’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:3750:10: warning: size of ‘sv’ 7168 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 3750 |     char sv[H5FD_MEM_NTYPES][1024];
+      |          ^~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_packedbits’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7179:14: warning: size of ‘dsetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7179 |     uint64_t dsetu64[F66_XDIM][F66_YDIM64], valu64bits;
+      |              ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7183:13: warning: size of ‘dset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7183 |     int64_t dset64[F66_XDIM][F66_YDIM64], val64bits;
+      |             ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_attr_intsize’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7360:14: warning: size of ‘dsetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7360 |     uint64_t dsetu64[F66_XDIM][F66_YDIM64], valu64bits;
+      |              ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7364:13: warning: size of ‘dset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7364 |     int64_t dset64[F66_XDIM][F66_YDIM64], val64bits;
+      |             ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_compound_attr_intsizes’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7965:18: warning: size of ‘Array1’ 45568 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 7965 |     Array1Struct Array1[F70_LENGTH];
+      |                  ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intscalars’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8373:14: warning: size of ‘dsetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8373 |     uint64_t dsetu64[F73_XDIM][F73_YDIM64], valu64bits;
+      |              ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8377:13: warning: size of ‘dset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8377 |     int64_t dset64[F73_XDIM][F73_YDIM64], val64bits;
+      |             ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_attr_intscalars’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8571:14: warning: size of ‘dsetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8571 |     uint64_t dsetu64[F73_XDIM][F73_YDIM64], valu64bits;
+      |              ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8575:13: warning: size of ‘dset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 8575 |     int64_t dset64[F73_XDIM][F73_YDIM64], val64bits;
+      |             ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intattrscalars’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9310:14: warning: size of ‘dsetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9310 |     uint64_t dsetu64[F73_XDIM][F73_YDIM64], valu64bits;
+      |              ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9314:13: warning: size of ‘dset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9314 |     int64_t dset64[F73_XDIM][F73_YDIM64], val64bits;
+      |             ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intsattrs’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9542:14: warning: size of ‘dsetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9542 |     uint64_t dsetu64[F66_XDIM][F66_YDIM64], asetu64[F66_XDIM*F66_YDIM64], valu64bits;
+      |              ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9542:45: warning: size of ‘asetu64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9542 |     uint64_t dsetu64[F66_XDIM][F66_YDIM64], asetu64[F66_XDIM*F66_YDIM64], valu64bits;
+      |                                             ^~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9546:13: warning: size of ‘dset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9546 |     int64_t dset64[F66_XDIM][F66_YDIM64], aset64[F66_XDIM*F66_YDIM64], val64bits;
+      |             ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9546:43: warning: size of ‘aset64’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9546 |     int64_t dset64[F66_XDIM][F66_YDIM64], aset64[F66_XDIM*F66_YDIM64], val64bits;
+      |                                           ^~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intsfourdims’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9955:14: warning: size of ‘dset1’ 7680 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 9955 |     uint32_t dset1[F81_ZDIM][F81_YDIM][F81_XDIM][F81_WDIM];
+      |              ^~~~~
+  CCLD     libdynlibdump.la
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_attr_intsize’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7353:1: warning: stack usage is 11472 bytes [-Wstack-usage=]
+ 7353 | gent_attr_intsize(void)
+      | ^~~~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_packedbits’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7172:1: warning: stack usage might be 11488 bytes [-Wstack-usage=]
+ 7172 | gent_packedbits(void)
+      | ^~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intsattrs’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9535:1: warning: stack usage might be 22912 bytes [-Wstack-usage=]
+ 9535 | gent_intsattrs(void)
+      | ^~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9790:1: warning: the frame size of 22832 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 9790 | }
+      | ^
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intscalars’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8366:1: warning: stack usage might be 11488 bytes [-Wstack-usage=]
+ 8366 | gent_intscalars(void)
+      | ^~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_attr_intscalars’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8564:1: warning: stack usage is 11488 bytes [-Wstack-usage=]
+ 8564 | gent_attr_intscalars(void)
+      | ^~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_intattrscalars’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:9303:1: warning: stack usage might be 11504 bytes [-Wstack-usage=]
+ 9303 | gent_intattrscalars(void)
+      | ^~~~~~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_compound_attr_intsizes’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:7929:13: warning: stack usage is 45792 bytes [-Wstack-usage=]
+ 7929 | static void gent_compound_attr_intsizes(void) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:8204:1: warning: the frame size of 45728 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 8204 | }
+      | ^
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c: In function ‘gent_str’:
+../../../../hdf5/tools/test/h5dump/h5dumpgentest.c:1741:13: warning: stack usage might be 13584 bytes [-Wstack-usage=]
+ 1741 | static void gent_str(void) {
+      |             ^~~~~~~~
+  CCLD     h5dumpgentest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5dump'
+Making all in misc
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/misc'
+Making all in vds
+make[4]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/misc/vds'
+  CC       UC_1_one_dim_gen.o
+  CC       UC_2_two_dims_gen.o
+  CC       UC_3_gaps_gen.o
+  CC       UC_4_printf_gen.o
+  CC       UC_5_stride_gen.o
+  CCLD     UC_4_printf_gen
+  CCLD     UC_5_stride_gen
+  CCLD     UC_2_two_dims_gen
+  CCLD     UC_3_gaps_gen
+  CCLD     UC_1_one_dim_gen
+make[4]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/misc/vds'
+make[4]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/misc'
+  CC       h5repart_gentest.o
+  CC       h5clear_gentest.o
+  CC       talign.o
+  CC       repart_test.o
+  CC       clear_open_chk.o
+../../../../hdf5/tools/test/misc/h5repart_gentest.c:28:12: warning: size of ‘buf’ 16384 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   28 | static int buf[FAMILY_NUMBER][FAMILY_SIZE];
+      |            ^~~
+../../../../hdf5/tools/test/misc/h5clear_gentest.c: In function ‘gen_cache_image_file’:
+../../../../hdf5/tools/test/misc/h5clear_gentest.c:65:9: warning: size of ‘buf’ 20000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   65 |     int buf[50][100];               /* Buffer for data to write */
+      |         ^~~
+../../../../hdf5/tools/test/misc/h5clear_gentest.c:57:1: warning: stack usage might be 20176 bytes [-Wstack-usage=]
+   57 | gen_cache_image_file(const char *fname)
+      | ^~~~~~~~~~~~~~~~~~~~
+../../../../hdf5/tools/test/misc/h5clear_gentest.c:136:1: warning: the frame size of 20096 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  136 | } /* gen_cache_image_file() */
+      | ^
+  CCLD     h5repart_gentest
+  CCLD     clear_open_chk
+  CCLD     repart_test
+  CCLD     talign
+  CCLD     h5clear_gentest
+make[4]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/misc'
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/misc'
+Making all in h5import
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5import'
+  CC       h5importtest.o
+../../../../hdf5/tools/test/h5import/h5importtest.c: In function ‘main’:
+../../../../hdf5/tools/test/h5import/h5importtest.c:73:12: warning: cast discards ‘volatile’ qualifier from pointer target type [-Wcast-qual]
+   73 |     if ((*((uint8_t*)(&ibyte))) == 0x67)
+      |            ^
+In file included from ../../../../hdf5/tools/test/h5import/h5importtest.c:14:
+../../../../hdf5/src/H5private.h:1393:31: warning: ‘__builtin_strncpy’ output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+ 1393 |     #define HDstrncpy(X,Y,Z)  strncpy(X,Y,Z)
+      |                               ^~~~~~~
+../../../../hdf5/tools/test/h5import/h5importtest.c:76:9: note: in expansion of macro ‘HDstrncpy’
+   76 |         HDstrncpy(machine_order, "BE", 2);
+      |         ^~~~~~~~~
+../../../../hdf5/src/H5private.h:1393:31: warning: ‘__builtin_strncpy’ output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+ 1393 |     #define HDstrncpy(X,Y,Z)  strncpy(X,Y,Z)
+      |                               ^~~~~~~
+../../../../hdf5/tools/test/h5import/h5importtest.c:74:9: note: in expansion of macro ‘HDstrncpy’
+   74 |         HDstrncpy(machine_order, "LE", 2);
+      |         ^~~~~~~~~
+  CCLD     h5importtest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5import'
+Making all in h5repack
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5repack'
+  CC       dynlib_rpk.lo
+  CC       dynlib_vrpk.lo
+  CC       h5repacktst.o
+  CC       testh5repack_detect_szip.o
+  CC       h5repackgentest.o
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_deflate’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:2551:16: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2551 |     int        buf[DIM1][DIM2];
+      |                ^~~
+  CCLD     testh5repack_detect_szip
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_shuffle’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:2626:14: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2626 |     int      buf[DIM1][DIM2];
+      |              ^~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_fletcher32’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:2691:14: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2691 |     int      buf[DIM1][DIM2];
+      |              ^~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_nbit’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:2760:14: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2760 |     int      buf[DIM1][DIM2];
+      |              ^~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_scaleoffset’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:2841:14: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2841 |     int      buf[DIM1][DIM2];
+      |              ^~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_all_filters’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:2920:14: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 2920 |     int      buf[DIM1][DIM2];
+      |              ^~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_layout’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:3179:14: warning: size of ‘buf’ 3200 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 3179 |     int      buf[DIM1][DIM2];
+      |              ^~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c: In function ‘make_layout3’:
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:3375:14: warning: size of ‘buf1’ 240000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 3375 |     int      buf1[DIM1_L3][DIM2_L3];
+      |              ^~~~
+  CCLD     h5repackgentest
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:3362:5: warning: stack usage is 241024 bytes [-Wstack-usage=]
+ 3362 | int make_layout3(hid_t loc_id)
+      |     ^~~~~~~~~~~~
+../../../../hdf5/tools/test/h5repack/h5repacktst.c:3485:1: warning: the frame size of 240960 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+ 3485 | }
+      | ^
+  CCLD     libdynlibadd.la
+  CCLD     libdynlibvers.la
+  CCLD     h5repacktst
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5repack'
+Making all in h5jam
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5jam'
+  CC       tellub.o
+  CC       h5jamgentest.o
+  CC       getub.o
+In file included from ../../../../hdf5/tools/test/h5jam/h5jamgentest.c:25:
+../../../../hdf5/tools/test/h5jam/h5jamgentest.c: In function ‘create_textfile’:
+../../../../hdf5/src/H5private.h:1555:31: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1555 |     #define HDwrite(F,M,Z)    write(F,M,Z)
+      |                               ^~~~~~~~~~~~
+../../../../hdf5/tools/test/h5jam/h5jamgentest.c:309:5: note: in expansion of macro ‘HDwrite’
+  309 |     HDwrite(fd, buf, size);
+      |     ^~~~~~~
+../../../../hdf5/tools/test/h5jam/h5jamgentest.c: In function ‘gent_ub’:
+../../../../hdf5/src/H5private.h:1555:31: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1555 |     #define HDwrite(F,M,Z)    write(F,M,Z)
+      |                               ^~~~~~~~~~~~
+../../../../hdf5/tools/test/h5jam/h5jamgentest.c:285:5: note: in expansion of macro ‘HDwrite’
+  285 |     HDwrite(fd, buf, ub_size);
+      |     ^~~~~~~
+  CCLD     tellub
+  CCLD     getub
+  CCLD     h5jamgentest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5jam'
+Making all in h5copy
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5copy'
+  CC       h5copygentest.o
+  CCLD     h5copygentest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5copy'
+Making all in h5format_convert
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5format_convert'
+  CC       h5fc_gentest.o
+  CC       h5fc_chk_idx.o
+  CCLD     h5fc_chk_idx
+  CCLD     h5fc_gentest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5format_convert'
+Making all in h5stat
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5stat'
+  CC       h5stat_gentest.o
+In file included from ../../../../hdf5/tools/test/h5stat/h5stat_gentest.c:24:
+../../../../hdf5/tools/test/h5stat/h5stat_gentest.c: In function ‘gen_err_refcount’:
+../../../../hdf5/src/H5private.h:1555:31: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1555 |     #define HDwrite(F,M,Z)    write(F,M,Z)
+      |                               ^~~~~~~~~~~~
+../../../../hdf5/tools/test/h5stat/h5stat_gentest.c:491:9: note: in expansion of macro ‘HDwrite’
+  491 |         HDwrite(fd, &val, 2);
+      |         ^~~~~~~
+  CCLD     h5stat_gentest
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/h5stat'
+Making all in perform
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test/perform'
+  CC       sio_perf.o
+  CC       sio_engine.o
+  CC       chunk.o
+  CC       iopipe.o
+  CC       chunk_cache.o
+  CC       zip_perf.o
+  CC       overhead.o
+../../../../hdf5/tools/test/perform/chunk_cache.c: In function ‘create_dset1’:
+../../../../hdf5/tools/test/perform/chunk_cache.c:113:18: warning: size of ‘data’ 324000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  113 |     int          data[DSET1_DIM1][DSET1_DIM2];    /* data for writing */
+      |                  ^~~~
+../../../../hdf5/tools/test/perform/chunk_cache.c: In function ‘create_dset2’:
+../../../../hdf5/tools/test/perform/chunk_cache.c:174:18: warning: size of ‘data’ 720000 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  174 |     int          data[DSET2_DIM1][DSET2_DIM2];    /* data for writing */
+      |                  ^~~~
+../../../../hdf5/tools/test/perform/sio_engine.c: In function ‘do_sio’:
+../../../../hdf5/tools/test/perform/sio_engine.c:141:17: warning: size of ‘fname’ 4096 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  141 |     char        fname[FILENAME_MAX];    /* test file name */
+      |                 ^~~~~
+../../../../hdf5/tools/test/perform/sio_perf.c: In function ‘parse_command_line’:
+../../../../hdf5/tools/test/perform/sio_perf.c:987:36: warning: to be safe all intermediate pointers in cast from ‘char **’ to ‘const char **’ must be ‘const’ qualified [-Wcast-qual]
+  987 |     while ((opt = get_option(argc, (const char **)argv, s_opts, l_opts)) != EOF) {
+      |                                    ^
+../../../../hdf5/tools/test/perform/sio_engine.c: In function ‘set_vfd’:
+../../../../hdf5/tools/test/perform/sio_engine.c:1167:14: warning: size of ‘sv’ 7168 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+ 1167 |         char sv[H5FD_MEM_NTYPES][1024];
+      |              ^~
+../../../../hdf5/tools/test/perform/zip_perf.c: In function ‘main’:
+../../../../hdf5/tools/test/perform/zip_perf.c:566:36: warning: to be safe all intermediate pointers in cast from ‘char **’ to ‘const char **’ must be ‘const’ qualified [-Wcast-qual]
+  566 |     while ((opt = get_option(argc, (const char **)argv, s_opts, l_opts)) > 0) {
+      |                                    ^
+../../../../hdf5/tools/test/perform/chunk_cache.c: In function ‘create_dset1’:
+../../../../hdf5/tools/test/perform/chunk_cache.c:107:12: warning: stack usage might be 324160 bytes [-Wstack-usage=]
+  107 | static int create_dset1(hid_t file)
+      |            ^~~~~~~~~~~~
+../../../../hdf5/tools/test/perform/chunk_cache.c:161:1: warning: the frame size of 324080 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  161 | }
+      | ^
+../../../../hdf5/tools/test/perform/chunk_cache.c: In function ‘create_dset2’:
+../../../../hdf5/tools/test/perform/chunk_cache.c:168:12: warning: stack usage might be 720160 bytes [-Wstack-usage=]
+  168 | static int create_dset2(hid_t file)
+      |            ^~~~~~~~~~~~
+../../../../hdf5/tools/test/perform/chunk_cache.c:222:1: warning: the frame size of 720080 bytes is larger than 16384 bytes [-Wframe-larger-than=]
+  222 | }
+      | ^
+  CC       perf_meta.o
+  CC       perf.o
+  CCLD     chunk
+  CCLD     chunk_cache
+  CCLD     overhead
+  CCLD     zip_perf
+  CCLD     h5perf_serial
+  CCLD     iopipe
+  CCLD     perf
+  CCLD     perf_meta
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test/perform'
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools/test'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test'
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools/test'
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/tools'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools'
+make[1]: Leaving directory '/home/derobins/hdf5_devel/develop/build/tools'
+Making all in .
+make[1]: Entering directory '/home/derobins/hdf5_devel/develop/build'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/derobins/hdf5_devel/develop/build'
+Making all in hl
+make[1]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl'
+Making all in src
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl/src'
+  CC       H5DO.lo
+  CC       H5DS.lo
+  CC       H5IM.lo
+  CC       H5LT.lo
+  CC       H5LTparse.lo
+  CC       H5LTanalyze.lo
+  CC       H5PT.lo
+../../../hdf5/hl/src/H5LT.c: In function ‘H5LTfind_dataset’:
+../../../hdf5/hl/src/H5LT.c:1414:77: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 1414 |     return H5Literate2(loc_id, H5_INDEX_NAME, H5_ITER_INC, 0, find_dataset, (void *)dset_name);
+      |                                                                             ^
+../../../hdf5/hl/src/H5LT.c: In function ‘H5LT_find_attribute’:
+../../../hdf5/hl/src/H5LT.c:2040:77: warning: cast discards ‘const’ qualifier from pointer target type [-Wcast-qual]
+ 2040 |     return H5Aiterate2(loc_id, H5_INDEX_NAME, H5_ITER_INC, NULL, find_attr, (void *)attr_name);
+      |                                                                             ^
+  CC       H5TB.lo
+  CC       H5LD.lo
+  CCLD     libhdf5_hl.la
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl/src'
+Making all in test
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl/test'
+  CC       gen_test_ds.o
+  CC       gen_test_ld.o
+  CC       test_lite.o
+  CC       test_file_image.o
+  CC       test_image.o
+  CC       test_table.o
+  CC       test_ds.o
+  CC       test_packet.o
+  CC       test_packet_vlen.o
+  CC       test_ld.o
+  CC       test_dset_append.o
+  CC       test_h5do_compat.o
+  CCLD     gen_test_ds
+  CCLD     gen_test_ld
+  CCLD     test_lite
+  CCLD     test_image
+  CCLD     test_file_image
+  CCLD     test_table
+  CCLD     test_packet
+  CCLD     test_ld
+  CCLD     test_dset_append
+  CCLD     test_h5do_compat
+  CCLD     test_ds
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl/test'
+Making all in tools
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl/tools'
+Making all in gif2h5
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl/tools/gif2h5'
+  CC       gif2hdf.o
+  CC       gif2mem.o
+  CC       decompress.o
+  CC       gifread.o
+  CC       writehdf.o
+  CC       hdf2gif.o
+  CC       hdfgifwr.o
+../../../../hdf5/hl/tools/gif2h5/decompress.c:60:5: warning: size of ‘Prefix’ 16384 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   60 | int Prefix[4096];
+      |     ^~~~~~
+../../../../hdf5/hl/tools/gif2h5/decompress.c:61:5: warning: size of ‘Suffix’ 16384 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   61 | int Suffix[4096];
+      |     ^~~~~~
+../../../../hdf5/hl/tools/gif2h5/decompress.c:65:5: warning: size of ‘OutCode’ 4100 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+   65 | int OutCode[1025];
+      |     ^~~~~~~
+../../../../hdf5/hl/tools/gif2h5/hdfgifwr.c:126:24: warning: size of ‘htab’ 40024 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  126 | static  count_int      htab [HSIZE];
+      |                        ^~~~
+../../../../hdf5/hl/tools/gif2h5/hdfgifwr.c:127:24: warning: size of ‘codetab’ 10006 bytes exceeds maximum object size 2560 [-Wlarger-than=]
+  127 | static  unsigned short codetab [HSIZE];
+      |                        ^~~~~~~
+  CC       h52gifgentst.o
+  CCLD     gif2h5
+  CCLD     h52gif
+  CCLD     h52gifgentst
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl/tools/gif2h5'
+Making all in h5watch
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl/tools/h5watch'
+  CC       h5watch.o
+  CC       swmr_check_compat_vfd.o
+  CC       h5watchgentest.o
+  CC       extend_dset-extend_dset.o
+  CCLD     swmr_check_compat_vfd
+  CCLD     h5watchgentest
+  CCLD     extend_dset
+  CCLD     h5watch
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl/tools/h5watch'
+make[3]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl/tools'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl/tools'
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl/tools'
+make[2]: Entering directory '/home/derobins/hdf5_devel/develop/build/hl'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl'
+make[1]: Leaving directory '/home/derobins/hdf5_devel/develop/build/hl'

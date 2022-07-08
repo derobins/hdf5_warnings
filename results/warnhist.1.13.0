@@ -1,0 +1,49 @@
+Total unique [non-ignored] warnings: 74
+Ignored notes / supplemental warning lines [not counted in unique warnings]: 0
+Duplicated warning lines [not counted in unique warnings]: 1
+Total ignored warnings: 0
+Total unique kinds of warnings: 9
+Total files with warnings: 28
+
+# of Warnings by frequency (file count)
+=======================================
+[ 0]   31 ( 7) - size of '-' - bytes exceeds maximum object size - [-Wlarger-than=]
+[ 1]   26 (15) - cast discards '-' qualifier from pointer target type [-Wcast-qual]
+[ 2]    3 ( 1) - comparing floating-point with '-' or '!=' is unsafe [-Wfloat-equal]
+[ 3]    3 ( 2) - assignment discards '-' qualifier from pointer target type [-Wdiscarded-qualifiers]
+[ 4]    3 ( 2) - the frame size of - bytes is larger than - bytes [-Wframe-larger-than=]
+[ 5]    3 ( 3) - stack usage might be - bytes [-Wstack-usage=]
+[ 6]    2 ( 1) - stack usage is - bytes [-Wstack-usage=]
+[ 7]    2 ( 2) - return discards '-' qualifier from pointer target type [-Wdiscarded-qualifiers]
+[ 8]    1 ( 1) - '-' directive output may be truncated writing between - and - bytes into a region of size - [-Wformat-truncation=]
+
+# of Warnings by filename (warning type)
+========================================
+[  0]   17 ( 4) - hdf5/test/cache.c
+[  1]    6 ( 1) - hdf5/test/ntypes.c
+[  2]    6 ( 1) - hdf5/test/set_extent.c
+[  3]    4 ( 3) - hdf5/test/tcoords.c
+[  4]    4 ( 1) - hdf5/src/H5Gobj.c
+[  5]    3 ( 1) - hdf5/src/H5Gtraverse.c
+[  6]    3 ( 1) - hdf5/src/H5Lint.c
+[  7]    3 ( 1) - hdf5/test/dt_arith.c
+[  8]    2 ( 2) - hdf5/src/H5Dint.c
+[  9]    2 ( 1) - hdf5/src/H5HFcache.c
+[ 10]    2 ( 1) - hdf5/src/H5Gloc.c
+[ 11]    2 ( 1) - hdf5/src/H5Ocache.c
+[ 12]    2 ( 1) - hdf5/test/objcopy_ref.c
+[ 13]    2 ( 1) - hdf5/src/H5Dchunk.c
+[ 14]    2 ( 1) - hdf5/tools/src/h5perf/sio_engine.c
+[ 15]    2 ( 1) - hdf5/test/dtransform.c
+[ 16]    1 ( 1) - hdf5/src/H5Gnode.c
+[ 17]    1 ( 1) - hdf5/src/H5Shyper.c
+[ 18]    1 ( 1) - hdf5/src/H5Gent.c
+[ 19]    1 ( 1) - hdf5/src/H5T.c
+[ 20]    1 ( 1) - hdf5/src/H5Tvlen.c
+[ 21]    1 ( 1) - hdf5/src/H5Tref.c
+[ 22]    1 ( 1) - hdf5/src/H5Gname.c
+[ 23]    1 ( 1) - H5lib_settings.c
+[ 24]    1 ( 1) - hdf5/src/H5Gint.c
+[ 25]    1 ( 1) - hdf5/test/vds_env.c
+[ 26]    1 ( 1) - hdf5/src/H5Dio.c
+[ 27]    1 ( 1) - hdf5/src/H5Opline.c
